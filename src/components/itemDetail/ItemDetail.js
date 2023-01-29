@@ -127,7 +127,7 @@ const ItemDetail = (props) => {
               <div className="CreditCardsContainer">
                 <p>
                   Hasta 18 cuotas o 1 pago de{" "}
-                  <span className="SpanClass">{price}</span>
+                  <span className="SpanClass">${price}</span>
                 </p>
                 <div className="CreditCardsImg">
                   <img alt="" src={MasterCard}></img>
@@ -139,7 +139,7 @@ const ItemDetail = (props) => {
               <h6>Tarjetas de débito</h6>
               <div className="CreditCardsContainer">
                 <p>
-                  Precio: <span className="SpanClass">{price}</span>
+                  Precio: <span className="SpanClass">${price}</span>
                 </p>
                 <div className="CreditCardsImg">
                   <img alt="" src={Maestro}></img>
@@ -151,7 +151,7 @@ const ItemDetail = (props) => {
               <h6>Efectivo</h6>
               <div className="CreditCardsContainer">
                 <p>
-                  Precio: <span className="SpanClass">{price}</span>
+                  Precio: <span className="SpanClass">${price}</span>
                 </p>
                 <div className="CreditCardsImg">
                   <img alt="" src={PagoFacil}></img>

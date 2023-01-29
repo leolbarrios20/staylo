@@ -1,7 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
 
 import Brand from "./Brand";
 import CartWidget from "./CartWidget";
@@ -11,6 +10,10 @@ import TopHeader from "../header/TopHeader";
 import "./NavBar.css";
 
 function Header() {
+
+
+
+
   return (
     <header>
       <TopHeader />
@@ -19,9 +22,9 @@ function Header() {
         expand="lg"
         bg="dark"
         variant="dark"
-        className="Header py-0"
+        className="Header py-0  "
       >
-        <Container>
+        <Container >
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
@@ -34,11 +37,21 @@ function Header() {
           
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">
             <Nav className="NavBar me-auto  mt-2">
-              <Link to="/">Inicio</Link>
+              <a href="/" className="js-search-toc-item SideNav-TocLink-module--cls2--3Ynil SideNav-TocLink-module--cls1--2TXMz nav-link">Inicio</a>
+              <a href="/products" className="js-search-toc-item SideNav-TocLink-module--cls2--3Ynil SideNav-TocLink-module--cls1--2TXMz nav-link">Productos</a>
+              <a href="/shipping" className="js-search-toc-item SideNav-TocLink-module--cls2--3Ynil SideNav-TocLink-module--cls1--2TXMz nav-link">Envios</a>
+              <a href="/services" className="js-search-toc-item SideNav-TocLink-module--cls2--3Ynil SideNav-TocLink-module--cls1--2TXMz nav-link">Servicios</a>
+              <a href="/about-us" className="js-search-toc-item SideNav-TocLink-module--cls2--3Ynil SideNav-TocLink-module--cls1--2TXMz nav-link">Nosotros</a>
+              {
+                /*
+                              <Link to="/">Inicio</Link>
               <Link to="/products">Productos</Link>
               <Link to="/shipping">Envios</Link>
               <Link to="/services">Servicios</Link>
               <Link to="/about-us">Nosotros</Link>
+                */
+              }
+
             </Nav>
             <hr></hr>
             <Nav className="CartSocialFlex ">
