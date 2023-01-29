@@ -16,12 +16,12 @@ hr {
 }
 .NavBar a {
   text-decoration: none;
-  color: rgb(235, 235, 235);
+  color: rgb(134, 134, 134);
   letter-spacing: 2px;
   font-size: 14px;
   font-weight: 500;
 
-  border-radius: 50px;
+  border-radius: 15px;
   padding: 3px 9px 3px 12px;
   transition: 0.3s;
 }
@@ -35,10 +35,6 @@ hr {
   }
 }
 
-.NavBar a:hover {
-  color: rgb(32, 32, 32);
-  background-color: rgb(235, 235, 235);
-}
 
 .CartSocialFlex {
   display: flex;

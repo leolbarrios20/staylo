@@ -8,8 +8,14 @@ import SocialMedia from "./SocialMedia";
 import TopHeader from "../header/TopHeader";
 
 import "./NavBar.css";
+import "./hover.css"
 
 function Header() {
+
+
+
+
+  
   return (
     <header>
       <TopHeader />
@@ -24,7 +30,7 @@ function Header() {
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
-          <Navbar.Toggle
+          <Navbar.Toggle 
             className="NavBarToggle py-0"
             aria-controls="basic-navbar-nav"
             variant="light"
@@ -33,11 +39,11 @@ function Header() {
 
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">
             <Nav className="NavBar me-auto  mt-2">
-              <Nav.Link href="/#">Inicio</Nav.Link>
-              <Nav.Link href="/#/products">Productos</Nav.Link>
-              <Nav.Link href="/#/shipping">Envios</Nav.Link>
-              <Nav.Link href="/#/services">Servicios</Nav.Link>
-              <Nav.Link href="/#/about-us">Nosotros</Nav.Link>
+              <Nav.Link className="hvr-underline-from-left" href="/#">Inicio</Nav.Link>
+              <Nav.Link className="hvr-underline-from-left" href="/#/products"  >Productos</Nav.Link>
+              <Nav.Link className="hvr-underline-from-left" href="/#/shipping">Envios</Nav.Link>
+              <Nav.Link className="hvr-underline-from-left" href="/#/services">Servicios</Nav.Link>
+              <Nav.Link className="hvr-underline-from-left" href="/#/about-us">Nosotros</Nav.Link>
             </Nav>
             <hr></hr>
             <Nav className="CartSocialFlex ">
