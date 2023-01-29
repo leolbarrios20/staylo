@@ -11,6 +11,11 @@ import TopHeader from "../header/TopHeader";
 import "./NavBar.css";
 
 function Header() {
+
+
+
+
+  
   return (
     <header>
       <TopHeader />
@@ -25,7 +30,7 @@ function Header() {
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
-          <Navbar.Toggle
+          <Navbar.Toggle 
             className="NavBarToggle py-0"
             aria-controls="basic-navbar-nav"
             variant="light"

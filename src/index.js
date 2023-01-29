@@ -3,7 +3,7 @@
 //Módulos
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 //Estilos
 import "./index.css";
@@ -28,7 +28,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <CartProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <Routes>
           <Route
@@ -54,7 +54,7 @@ root.render(
           />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </CartProvider>
   </React.StrictMode>
 );

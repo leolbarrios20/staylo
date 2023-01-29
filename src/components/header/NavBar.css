@@ -1,12 +1,16 @@
 .NavBarToggle{
   border: none;
 }
+
+/*
 header{
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
+
+*/
 hr {
   color: white;
 }
