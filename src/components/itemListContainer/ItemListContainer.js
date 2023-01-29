@@ -10,7 +10,6 @@ import { IoShirtOutline } from "react-icons/io5";
 import { IoShirtSharp } from "react-icons/io5";
 import{GiHoodie} from "react-icons/gi"
 
-import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
