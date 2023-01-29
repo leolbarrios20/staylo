@@ -1,6 +1,6 @@
 .TopHeader {
-  background-color: #ececec;
-    color: rgb(27, 27, 27);
+  background-color: #000000;
+    color: rgb(243, 243, 243);
     text-align: center;
     letter-spacing: 1px;
     padding: 5px;
@@ -20,8 +20,27 @@
     margin: 0 10px;
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 990px) {
     .TopHeader{
-      display: none   ;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      align-items: center;
+      height: auto;
+      
+    }
+
+    .TopHeader p {
+      font-size: 10px;
+    }
+
+    .TopHeader p span {
+      margin: 0;
+    }
+    
+
+    .TruckIcon, .MoneyIcon {
+      display: none;
     }
     }

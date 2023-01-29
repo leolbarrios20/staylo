@@ -8,14 +8,14 @@ const TopHeader = () =>{
         <div className="TopHeader">
         <p>
           <span>
-            <FaTruck size={25} />
+            <FaTruck className="TruckIcon" size={25} />
           </span>
           Envios gratis desde $15000 a todo el país
         </p>
         <p>
-          10% de descuento pagando por transferencia bancaria
+          10% de descuento abonando por transferencia bancaria
           <span>
-            <FaRegMoneyBillAlt size={30} />
+            <FaRegMoneyBillAlt className="MoneyIcon" size={30} />
           </span>
         </p>
       </div>

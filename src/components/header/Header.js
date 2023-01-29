@@ -25,9 +25,11 @@ function Header() {
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
-          <Navbar.Toggle
-            className="NavBarToggle py-0"
+          <Navbar.Toggle 
+            className="NavBarToggle py-0" 
             aria-controls="basic-navbar-nav"
+            variant="light"
+            bg="light"
           />
           
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">

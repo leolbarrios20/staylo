@@ -4,8 +4,8 @@
     align-items: baseline;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(230, 230, 230);
-    transition: 0.2s;
+    color: rgb(255, 255, 255);
+    font-family: 'Colonna MT';
   }
 
   .LogoSpecsContainer:hover{

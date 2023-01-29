@@ -1,3 +1,4 @@
+
 .Container {
   display: flex;
   justify-content: center;
@@ -109,7 +110,6 @@
 .DetailContainer .NavDetail {
   display: flex;
   justify-content: space-between;
-  max-width: 350px;
 }
 
 .DetailContainer .NavDetail a {

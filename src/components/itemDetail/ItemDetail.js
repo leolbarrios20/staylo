@@ -13,13 +13,14 @@ import { useCartContext } from "../../context/CartContext";
 import { useState } from "react";
 
 import ItemCount from "../itemCount/ItemCount";
-import Modal from "react-bootstrap/Modal";
+import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Form from "react-bootstrap/Form";
 import ItemSizes from "../itemSizes/ItemSizes";
+import ItemHeart from "../itemHeart/ItemHeart";
 
 const ItemDetail = (props) => {
   const [show, setShow] = useState(false);
@@ -78,14 +79,19 @@ const ItemDetail = (props) => {
         </div>
         */}
         <img alt="" className="ImageDetail" src={img}></img>
+        
         <div className="DetailContainer">
+        
           <nav className="NavDetail">
             <Link to="/">Inicio</Link>
             <span>/</span>
             <Link to="/products/">Productos</Link>
             <span>/</span>
             <p> {name} </p>
+            <ItemHeart  className="ItemHeartDetail"/>
+            
           </nav>
+          
           <h3> {name} </h3>
           <h4 className="Price"> ${price} </h4>
           <h5> {description} </h5>
