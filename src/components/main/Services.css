@@ -1,0 +1,11 @@
+.ServicesContainer{
+    text-align: center;
+    height: 80vmin;
+    color: black;
+}
+
+.ServicesContainer h3{
+    font-size: 50px;
+    padding-top: 300px;
+    color: black;
+}

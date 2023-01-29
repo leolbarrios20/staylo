@@ -1,0 +1,19 @@
+.SocialMedia{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.SocialMedia a {
+    margin: 5px;
+  }
+  
+  @media (max-width: 990px) {
+    .SocialMedia{
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+
+      
+    }
+  }

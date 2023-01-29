@@ -1,0 +1,203 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  
+}
+
+@media (max-width: 1000px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .DetailContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  
+}
+
+.DetailContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+
+
+.ColumnImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ColumnImage img {
+  width: 70px;
+}
+
+.ModalTitle {
+  font-size: 20px;
+}
+
+.Modal {
+  background-color: rgba(0, 0, 0, 0.519);
+  padding-top: 150px;
+}
+
+.Modal .CreditCardsContainer {
+  border: 1px solid rgb(197, 197, 197);
+  padding: 2%;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.Modal .CreditCardsContainer .SpanClass {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.Modal .CreditCardsContainer p {
+  font-size: 15px;
+  letter-spacing: -0.6px;
+}
+
+.ModalBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.ModalBody h6 {
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+
+.DetailContainer .Button {
+  width: 100%;
+}
+
+.DetailContainer .AmountDiscount {
+  font-weight: 700;
+}
+
+.DetailContainer .IconContainer {
+  margin: 0 0 0 5px;
+}
+
+.DetailContainer .FormContainer {
+  display: flex;
+  gap: 2%;
+  margin: 10px 0 0 0;
+}
+
+.DetailContainer h3 {
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.DetailContainer .Price {
+  font-weight: 700;
+}
+
+.DetailContainer .NavDetail {
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+}
+
+.DetailContainer .NavDetail a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+
+  transition: 3s ease;
+}
+
+.DetailContainer .NavDetail p {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: black;
+
+  transition: 3s ease;
+}
+
+.DiscountContainer {
+  margin-top: 2%;
+}
+
+.PaymentsMethods {
+  color: black;
+  font-weight: 600;
+
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.DetailContainer .NavDetail a:hover {
+  text-decoration: underline;
+}
+
+.DetailContainer .NavDetail span {
+  font-weight: 700;
+}
+
+.ImageDetail {
+  max-width: 450px;
+  border-radius: 23px;
+  filter: drop-shadow(-2px -2px 2px black);
+}
+
+.CreditCardsImg {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2%;
+}
+
+.CreditCardsImg img {
+  max-width: 50px;
+}
+
+.DebitCardsContainer {
+  border: 1px solid rgb(197, 197, 197);
+  padding: 2%;
+  border-radius: 15px;
+}
+
+.DebitCardsImg {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2%;
+}
+
+.DebitCardsImg img {
+  max-width: 50px;
+}
+
+.CashContainer {
+  border: 1px solid rgb(197, 197, 197);
+  padding: 2%;
+  border-radius: 15px;
+}
+
+.CashCardsImg {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2%;
+}
+
+.CashCardsImg img {
+  max-width: 50px;
+}
+
+p .StockProduct{
+  font-weight: 800;
+}

@@ -1,0 +1,13 @@
+header{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 13px black;
+}
+
+.HeaderFlex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 2px 13px black;
+}
+

@@ -1,0 +1,34 @@
+
+.LogoSpecsContainer{
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    transition: 0.2s;
+  }
+
+  
+
+  .LogoSpecsContainer:hover{
+    filter: drop-shadow(2px 1px 20px rgb(146, 146, 146));
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  
+  .LogoSpecsContainer span {
+    font-weight: 400;
+    font-size: 60px;
+    font-family: 'Colonna MT';
+  }
+  
+  
+  .LogoSpecsContainer p {
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Colonna MT';
+  }
+
+
+  

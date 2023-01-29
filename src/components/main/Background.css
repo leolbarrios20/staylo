@@ -1,0 +1,52 @@
+.Background {
+  text-align: center;
+  height: 66vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../assets/img/background3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.214);
+  background-blend-mode: darken;
+}
+
+
+
+.Background h1 {
+  text-align: center;
+  font-size: 140px;
+  color: rgb(245, 245, 245);
+  font-family: "Colonna MT";
+  text-shadow: 1px 3px 4px black;
+  transform: translate(-15%, 20%);
+}
+
+@media (max-width: 990px) {
+  .Background h1{
+
+    transform: translate(0, 0);
+    font-size: 100px;
+  }
+}
+
+
+.Background h2 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 5px;
+  color: rgb(245, 245, 245);
+  font-family: "Agency FB";
+  text-shadow: 1px 1px 3px black;
+  transform: translate(-15%, -10%);
+}
+
+
+@media (max-width: 990px) {
+  .Background h2{
+    transform: translate(0, 0);
+    font-size: 25px;
+  }
+}

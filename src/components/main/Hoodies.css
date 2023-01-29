@@ -1,0 +1,9 @@
+.HoodiesContainer{
+    text-align: center;
+    height: 80vmin;
+}
+
+.HoodiesContainer h3{
+    font-size: 50px;
+    padding-top: 300px;
+}

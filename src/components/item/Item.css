@@ -1,0 +1,108 @@
+
+
+
+.PriceHeart{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.ButtonAddSub{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgb(211, 211, 211);
+  height: 40px;
+  border-radius: 25px;
+}
+
+.ButtonAddSub span{
+  color: rgb(0, 0, 0);
+}
+
+.ButtonAddSub button{
+  background-color: transparent;
+  font-size: 30px;
+  border: none;
+  color: rgb(0, 0, 0);
+
+}
+
+.TalleContainer {
+  display: flex;
+  align-content: center;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.TalleContainer select {
+  width: 100px;
+  text-align: center;
+  font-weight: 600;
+  padding: 1%;
+  border-radius: 5px;
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
+  font-family: 'Agency FB';
+}
+
+.TalleContainer p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Agency FB';
+}
+
+.CardTitle {
+  font-weight: 700;
+  font-size: 18px;
+  background-color: rgb(34, 34, 34);
+  color: rgb(241, 241, 241);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.CardPrice {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: left;
+
+}
+
+.CardPriceBefore {
+  text-decoration: line-through;
+  font-style: italic;
+  font-weight: 700;
+  color: red;
+}
+
+.CardDesc {
+  font-weight: 600;
+  font-size: 20px;
+
+  text-align: center;
+  
+}
+
+.CardAvailable {
+  font-weight: 700;
+}
+
+.Card .Image {
+  cursor: pointer;
+}
+
+div .Card .Link{
+  text-align: center;
+  text-decoration: none;
+  display: grid;
+  color: crimson;
+  font-weight: 500;
+}
+
+
+div .Card .Link:hover{
+  color: rgb(255, 0, 51);
+}
+
