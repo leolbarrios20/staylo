@@ -18,6 +18,8 @@ const CartProvider = ({ children }) => {
   //Funciones de nuestro CartProvider
   console.log(items);
 
+  /*
+
   const cartList = () =>{
     return items
   }
@@ -25,7 +27,7 @@ const CartProvider = ({ children }) => {
   const itemsInCart = () =>{
     return items.length
   }
-
+*/
   const addToCart = (data) => {
     if (validateProduct(data.id)) {
       alert("El producto ya esta en el carrito");
