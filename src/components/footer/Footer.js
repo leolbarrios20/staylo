@@ -50,10 +50,10 @@ function Footer() {
         <p className="FooterTitles">Nuestras redes sociales </p>
         <div className="FlexIcons">
         <a href="https://www.instagram.com/staylo_cba/" target="_blank" rel="noreferrer" >
-          <BsInstagram color="white" size={20} />
+          <BsInstagram color="white" size={18} />
         </a>
         <a href="https://www.facebook.com/search/top?q=staylo_cba" target="_blank" rel="noreferrer" >
-          <BsFacebook color="white" size={21} />
+          <BsFacebook color="white" size={18} />
         </a>
         </div>
         

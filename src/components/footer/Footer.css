@@ -1,3 +1,5 @@
+
+
 .Footer{
     background-color: #212429;
     padding: 20px;
@@ -5,7 +7,7 @@
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    font-family: "Agency FB";
+    font-family: 'agency_fb', sans-serif;
 }
 
 @media (max-width: 990px) {
@@ -25,6 +27,12 @@
     display: flex;
     justify-content: flex;
     align-items: baseline;
+    gap: 6px;
+}
+
+.ContactFlex p{
+    margin: 0;
+
 }
 
 
@@ -38,17 +46,21 @@
 
 .FooterTitles{
     font-size: 21px;
-    margin-bottom: 1px;
-    font-weight: 600;
-    padding: 20px 0 0 0;
+    padding: 20px 0 10px 0;
     margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
+
 
 
 .PaymentsMethods{
     display: flex;
     flex-direction: column;
 }
+
+
 
 .PaymentsMethodsImg{
     display: flex;
