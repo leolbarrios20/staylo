@@ -12,21 +12,21 @@ const SocialMedia = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <BsInstagram color="black" size={22} />
+        <BsInstagram color="white" size={22} />
       </a>
       <a
         href="https://www.facebook.com/search/top?q=staylo_cba"
         target="_blank"
         rel="noreferrer"
       >
-        <BsFacebook color="black" size={23} />
+        <BsFacebook color="white" size={23} />
       </a>
       <a
         href="https://github.com/leolbarrios20"
         target="_blank"
         rel="noreferrer"
       >
-        <GoMarkGithub color="black" size={23} />
+        <GoMarkGithub color="white" size={23} />
       </a>
     </div>
   );

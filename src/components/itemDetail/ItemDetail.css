@@ -5,7 +5,7 @@
   
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 990px) {
   .Container {
     display: flex;
     flex-direction: column;
@@ -152,8 +152,6 @@
 
 .ImageDetail {
   max-width: 450px;
-  border-radius: 23px;
-  filter: drop-shadow(-2px -2px 2px black);
 }
 
 .CreditCardsImg {

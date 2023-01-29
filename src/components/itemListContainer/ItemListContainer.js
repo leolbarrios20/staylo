@@ -44,21 +44,26 @@ const ItemListContainer = () => {
       <Link to="/products/Sublimated"><IoShirtOutline color="black" size={31}/></Link>
       </span>
     </OverlayTrigger>
-    <OverlayTrigger overlay={<Tooltip >Remeras Estampadas</Tooltip>}>
-      <span className="d-inline-block">
-      <Link to="/products/Stamped"><IoShirtSharp color="black"  size={31}/></Link>
-      </span>
-    </OverlayTrigger>
     <OverlayTrigger overlay={<Tooltip >Buzos</Tooltip>}>
       <span className="d-inline-block">
       <Link to="/products/Hoodie"><GiHoodie color="black" size={31}/></Link>
       </span>
     </OverlayTrigger>
-    <OverlayTrigger overlay={<Tooltip >Todos los productos</Tooltip>}>
+    <OverlayTrigger overlay={<Tooltip >Remeras Estampadas</Tooltip>}>
+      <span className="d-inline-block">
+      <Link to="/products/Stamped"><IoShirtSharp color="black"  size={31}/></Link>
+      </span>
+    </OverlayTrigger>
+    {
+      /*
+          <OverlayTrigger overlay={<Tooltip >Todos los productos</Tooltip>}>
       <span className="d-inline-block">
       <Link to="/products/">Todos los productos</Link>
       </span>
     </OverlayTrigger>
+      */
+    }
+
       </nav>
     {
       /*

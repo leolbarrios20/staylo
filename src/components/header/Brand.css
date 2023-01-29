@@ -4,29 +4,40 @@
     align-items: baseline;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(29, 29, 29);
+    color: rgb(230, 230, 230);
     transition: 0.2s;
   }
 
-  
-
   .LogoSpecsContainer:hover{
-    filter: drop-shadow(2px 1px 20px rgb(146, 146, 146));
-    color: white;
-    transform: scale(1.05);
+    color: rgb(230, 230, 230);
   }
-  
+
+
+
   
   .LogoSpecsContainer span {
     font-weight: 400;
     font-size: 60px;
     font-family: 'Colonna MT';
   }
+
+  @media (max-width: 990px) {
+    .LogoSpecsContainer span {
+      font-size: 50px;
+    }
+
+    .BrandContainer{
+      transform: translate(0, 4px);
+    }
+    
   
+
+    
+  }
   
   .LogoSpecsContainer p {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 32px;
     font-family: 'Colonna MT';
   }
 

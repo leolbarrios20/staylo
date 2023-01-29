@@ -1,7 +1,8 @@
 .SocialMedia{
     display: flex;
     align-items: center;
-    margin-right: 20px;
+
+
 }
 
 .SocialMedia a {
@@ -13,6 +14,7 @@
       display: flex;
       justify-content: space-between;
       gap: 50px;
+
 
       
     }

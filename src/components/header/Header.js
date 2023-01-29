@@ -17,21 +17,21 @@ function Header() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        bg="light"
-        variant="light"
-        className="Header"
+        bg="dark"
+        variant="dark"
+        className="Header py-0"
       >
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
           <Navbar.Toggle
-            className="NavBarToggle"
+            className="NavBarToggle py-0"
             aria-controls="basic-navbar-nav"
           />
           
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">
-            <Nav className="NavBar me-auto ms-5 mt-2">
+            <Nav className="NavBar me-auto  mt-2">
               <Link to="/">Inicio</Link>
               <Link to="/products">Productos</Link>
               <Link to="/shipping">Envios</Link>
@@ -39,7 +39,7 @@ function Header() {
               <Link to="/about-us">Nosotros</Link>
             </Nav>
             <hr></hr>
-            <Nav className="CartSocialFlex ms-5">
+            <Nav className="CartSocialFlex ">
               <SocialMedia />
               <CartWidget amount="0" />
             </Nav>

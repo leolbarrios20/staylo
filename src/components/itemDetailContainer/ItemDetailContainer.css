@@ -1,15 +1,11 @@
 .Back{
     display: flex;
-    padding: 20px;
+    padding: 40px 20px;
     text-decoration: none;
-    transform: translate(5px, 50px);
+
 }
 
-@media (max-width: 750px) {
-    .Back {
-        transform: translate(15px, 10px);
-    }   
-  }
+
 
 
 
