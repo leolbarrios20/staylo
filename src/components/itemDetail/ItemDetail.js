@@ -50,7 +50,7 @@ const ItemDetail = (props) => {
       };
       addToCart(product);
     }else{
-      alert("Compra culia")
+      alert("Debes agregar al menos un producto")
     }
   };
 
