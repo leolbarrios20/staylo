@@ -10,9 +10,10 @@ import PagoFacil from "../assets/img/pagofacil.png";
 import RapiPago from "../assets/img/rapipago.png";
 
 import { useCartContext } from "../../context/CartContext";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import ItemCount from "../itemCount/ItemCount";
+
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -21,6 +22,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import Form from "react-bootstrap/Form";
 import ItemSizes from "../itemSizes/ItemSizes";
 import ItemHeart from "../itemHeart/ItemHeart";
+import { Spinner } from "react-bootstrap";
 
 const ItemDetail = (props) => {
   const [show, setShow] = useState(false);
@@ -54,10 +56,28 @@ const ItemDetail = (props) => {
     }
   };
 
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 800);
+  }, []);
+
 
 
   return (
-    <section>
+    <div>
+
+{loading ? (
+        <div className="SpinnerContainer">
+          <Spinner
+            loading={loading}
+          />
+        </div>
+      ) : (
+        <section>
       <article className="Container container row mx-auto">
         {/* 
           <div className="ColumnImage">
@@ -196,6 +216,12 @@ const ItemDetail = (props) => {
       </article>
       <ItemSizes />
     </section>
+
+      )}
+
+
+    </div>
+    
   );
 };
 
