@@ -21,17 +21,37 @@
   text-align: center;
 }
 
-.CartWidget p{
+.CartWidget p {
   margin-top: 10px;
   color: rgb(223, 223, 223);
   font-weight: 700;
 }
 
 @media (max-width: 990px) {
-  .CartWidget{
-padding: 20px;
-border-radius: 15px;
-
+  .CartWidget {
+    padding: 20px;
+    border-radius: 15px;
   }
+}
+
+.OffCanvasBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.OffCanvasTitle {
+  font-weight: 700;
+}
+
+.OffCanvasP {
+  font-weight: 600;
+  text-align: center;
+}
+
+.OffCanvasLink {
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
 }
 

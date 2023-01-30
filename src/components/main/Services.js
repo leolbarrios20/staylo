@@ -1,9 +1,10 @@
 import "./Services.css"
+import ImgServices from "../assets/img/servicio.jpg"
 
 const Services = () =>{
     return(
-        <div className="ServicesContainer">
-            <h3>Servicios</h3>
+        <div className="ServicesContainer container">
+            <img className="col-12" alt="" src= {ImgServices} ></img>
         </div>
     )
 }

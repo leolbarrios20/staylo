@@ -12,10 +12,6 @@ import "./hover.css"
 
 function Header() {
 
-
-
-
-  
   return (
     <header>
       <TopHeader />
