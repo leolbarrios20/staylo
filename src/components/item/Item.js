@@ -12,19 +12,19 @@ import { Link } from "react-router-dom";
 //Logic
 
 export const Item = (props) => {
-  const { name, price, priceBefore, img, id } = props.data;
+  const { title, price, priceBefore, img, id } = props.data;
 
   return (
     <div className="col-lg-4 col-md-6 mt-3">
       <Card className="Card">
-        <Card.Title className="CardTitle">{name}</Card.Title>
+        <Card.Title className="CardTitle">{title}</Card.Title>
         <Card.Img className="Image" src={img} />
         <Card.Body>
           <div className="PriceHeart">
             <Card.Text className="CardPriceBefore">
               Antes: {priceBefore}{" "}
             </Card.Text>
-            <ItemHeart />
+            <ItemHeart/>
           </div>
           <Card.Text className="CardPrice">${price} </Card.Text>
           <Card.Text className="CardDesc"> </Card.Text>

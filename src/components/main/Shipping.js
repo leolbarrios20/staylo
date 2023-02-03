@@ -18,7 +18,7 @@ const Shipping = () => {
     <section>
       {loading ? (
         <div className="SpinnerContainer">
-          <Spinner loading={loading} />
+          <Spinner />
         </div>
       ) : (
         <div className="ShippingContainer">

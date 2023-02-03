@@ -4,3 +4,14 @@
     place-content: center;
 }
 
+@media (max-width: 990px) {
+    .SpinnerContainer {
+      transform: translate(0, -50px);
+    }
+  }
+
+  .SpinnerMain{
+    height: 60vh;
+    display: grid;
+    place-content: center;
+  }

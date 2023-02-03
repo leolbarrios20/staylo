@@ -10,29 +10,20 @@ import TopHeader from "../header/TopHeader";
 import "./NavBar.css";
 import "./hover.css"
 
+
+
 function Header() {
 
   return (
     <header>
       <TopHeader />
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="dark"
-        variant="dark"
-        className="Header py-0  "
-      >
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"className="Header py-0  ">
         <Container>
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
-          <Navbar.Toggle 
-            className="NavBarToggle py-0"
-            aria-controls="basic-navbar-nav"
-            variant="light"
-            bg="light"
+          <Navbar.Toggle  className="NavBarToggle py-0" aria-controls="basic-navbar-nav" variant="light" bg="light"
           />
-
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">
             <Nav className="NavBar me-auto  mt-2">
               <Nav.Link className="hvr-underline-from-left" href="/#">Inicio</Nav.Link>
@@ -44,7 +35,7 @@ function Header() {
             <hr></hr>
             <Nav className="CartSocialFlex ">
               <SocialMedia />
-              <CartWidget amount="0" />
+              <CartWidget amount="0"/>
             </Nav>
           </Navbar.Collapse>
         </Container>

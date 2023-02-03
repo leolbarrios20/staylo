@@ -9,12 +9,14 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 
 //Componentes
+
+/*Context*/
 import CartProvider from "./context/CartContext";
+
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import ItemListContainer from "./components/itemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer";
-import Hoodies from "./components/main/Hoodies";
 import Shipping from "./components/main/Shipping";
 import Services from "./components/main/Services";
 import AboutUs from "./components/main/AboutUs";
@@ -27,6 +29,7 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+
     <CartProvider>
       <HashRouter>
         <Header />
@@ -39,7 +42,6 @@ root.render(
           <Route exact path="/shipping" element={<Shipping />} />
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/about-us" element={<AboutUs />} />
-          <Route exact path="/hoodies" element={<Hoodies />} />
           <Route exact path="/products" element={<ItemListContainer />} />
           <Route exact path="/cart" element={<CartListContainer />} />
           <Route
@@ -56,6 +58,7 @@ root.render(
         <Footer />
       </HashRouter>
     </CartProvider>
+
   </React.StrictMode>
 );
 

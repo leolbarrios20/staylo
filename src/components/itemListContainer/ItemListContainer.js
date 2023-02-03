@@ -47,41 +47,37 @@ const ItemListContainer = () => {
     <section>
       {loading ? (
         <div className="SpinnerContainer">
-          <Spinner
-            loading={loading}
-          />
+          <Spinner />
         </div>
       ) : (
         <div>
-      <nav className="NavFilter container mx-auto">
-        <OverlayTrigger overlay={<Tooltip>Remeras Sublimadas</Tooltip>}>
-          <span className="d-inline-block">
-            <Link to="/products/Sublimated">
-              <IoShirtOutline color="black" size={31} />
-            </Link>
-          </span>
-        </OverlayTrigger>
-        <OverlayTrigger overlay={<Tooltip>Buzos</Tooltip>}>
-          <span className="d-inline-block">
-            <Link to="/products/Hoodie">
-              <GiHoodie color="black" size={31} />
-            </Link>
-          </span>
-        </OverlayTrigger>
-        <OverlayTrigger overlay={<Tooltip>Remeras Estampadas</Tooltip>}>
-          <span className="d-inline-block">
-            <Link to="/products/Stamped">
-              <IoShirtSharp color="black" size={31} />
-            </Link>
-          </span>
-        </OverlayTrigger>
-      </nav>
-      <ItemList products={products} />
-    </div>
+          <nav className="NavFilter container mx-auto">
+            <OverlayTrigger overlay={<Tooltip>Remeras Sublimadas</Tooltip>}>
+              <span className="d-inline-block">
+                <Link to="/products/Sublimated">
+                  <IoShirtOutline color="black" size={31} />
+                </Link>
+              </span>
+            </OverlayTrigger>
+            <OverlayTrigger overlay={<Tooltip>Buzos</Tooltip>}>
+              <span className="d-inline-block">
+                <Link to="/products/Hoodie">
+                  <GiHoodie color="black" size={31} />
+                </Link>
+              </span>
+            </OverlayTrigger>
+            <OverlayTrigger overlay={<Tooltip>Remeras Estampadas</Tooltip>}>
+              <span className="d-inline-block">
+                <Link to="/products/Stamped">
+                  <IoShirtSharp color="black" size={31} />
+                </Link>
+              </span>
+            </OverlayTrigger>
+          </nav>
+          <ItemList products={products} />
+        </div>
       )}
-      
     </section>
-    
   );
 };
 

@@ -4,9 +4,13 @@ import { useState, useEffect } from "react";
 
 import { Spinner } from "react-bootstrap";
 
+
 import "./Main.css";
 
 const Main = () => {
+
+
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -19,10 +23,8 @@ const Main = () => {
   return (
     <main className="Main">
       {loading ? (
-        <div className="SpinnerContainer">
-          <Spinner animation="border"
-            loading={loading}
-          />
+        <div className=" SpinnerMain">
+          <Spinner />
         </div>
       ) : (
         <Background brand="Staylo" specs="Remeras Personalizadas" />
