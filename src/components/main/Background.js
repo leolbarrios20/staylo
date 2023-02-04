@@ -9,7 +9,6 @@ const Background = (props) => {
       <h2>{props.specs}</h2>
       <Link to="/products" className="SeeProducts">Ver productos</Link>
       </div>
-
     </section>
   );
 };

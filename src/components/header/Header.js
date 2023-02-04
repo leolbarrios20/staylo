@@ -35,7 +35,7 @@ function Header() {
             <hr></hr>
             <Nav className="CartSocialFlex ">
               <SocialMedia />
-              <CartWidget amount="0"/>
+              <CartWidget amount= {0} />
             </Nav>
           </Navbar.Collapse>
         </Container>

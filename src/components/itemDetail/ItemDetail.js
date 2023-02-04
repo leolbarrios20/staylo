@@ -1,7 +1,5 @@
 import "./ItemDetail.css";
 
-import ScrollToTop from "react-scroll-to-top";
-
 import Cabal from "../assets/img/cabal.png";
 import MasterCard from "../assets/img/mastercard.png";
 import TarjetShopping from "../assets/img/tarjeta-shopping.png";
@@ -11,11 +9,15 @@ import Maestro from "../assets/img/maestro.png";
 import PagoFacil from "../assets/img/pagofacil.png";
 import RapiPago from "../assets/img/rapipago.png";
 
+import ScrollToTop from "react-scroll-to-top";
+
 import { useCartContext } from "../../context/CartContext";
 
 import { useState, useEffect } from "react";
 
 import ItemCount from "../itemCount/ItemCount";
+import ItemSizes from "../itemSizes/ItemSizes";
+import ItemHeart from "../itemHeart/ItemHeart";
 
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -23,8 +25,6 @@ import { Link } from "react-router-dom";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Form from "react-bootstrap/Form";
-import ItemSizes from "../itemSizes/ItemSizes";
-import ItemHeart from "../itemHeart/ItemHeart";
 import { Spinner } from "react-bootstrap";
 
 const ItemDetail = (props) => {
@@ -54,8 +54,6 @@ const ItemDetail = (props) => {
   const funcionDelHijoDeGuardarCantidad = (cantidadX) => {
     setCantidadProductosAComprar(cantidadX);
   };
-
-
 
   useEffect(() => {
     console.log(
@@ -94,7 +92,6 @@ const ItemDetail = (props) => {
       setLoading(false);
     }, 1500);
   }, []);
-
 
   //////////////////////////////////////////////////////
 
@@ -247,23 +244,29 @@ const ItemDetail = (props) => {
 
               <Modal className="OnAdd" show={show2} onHide={handleClose2} animation={false}>
                 <Modal.Header closeButton>
-                  <Modal.Title>{title}</Modal.Title>
+                  <Modal.Title>Continuar compra</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                  Woohoo, you're reading this text in a modal!
+                <Modal.Body className="ModalBody">
+                  Agregaste un/a <strong>{title}</strong> al carrito!
+                  <img alt="" src={img} ></img>
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose2}>
+                  <Button variant="danger" onClick={handleClose2}>
                     Cancelar
                   </Button>
-                  <Button variant="primary" onClick={handleClose2}>
-                    Continuar compra
+                  <Link to="/products">
+                    <Button variant="primary">Agregar mas productos</Button>
+                  </Link>
+                  <Button variant="success" onClick={handleClose2}>
+                    Ver carrito
                   </Button>
+
                 </Modal.Footer>
               </Modal>
             </div>
           </article>
           <ItemSizes />
+          
           {CoolPage()}
         </section>
       )}

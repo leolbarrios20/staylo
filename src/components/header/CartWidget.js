@@ -8,12 +8,15 @@ import "../header/CartWidget.css";
 import { Nav } from "react-bootstrap";
 
 export const CartWidget = (props) => {
+  
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
+
+
     <div className="CartWidgetContainer">
       <Link onClick={handleShow} className="CartWidget">
         <GiShoppingCart size={35} color="white" />
