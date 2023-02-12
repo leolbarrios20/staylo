@@ -1,78 +1,50 @@
-//useContext (Utiliza el contexto creado), createContext (Crear el contexto de la aplicacion) => react
-import { useContext, createContext, useState } from "react";
+import { createContext, useState } from "react";
+export const GContext = createContext();
 
-//Crear el contexto
-//Exportar el contexto creado
-export const CartContext = createContext([]);
+const CartContext = ({ children }) => {
+  const [itemsCarrito, setItemsCarrito] = useState([]);
 
-//Crear nuestra funcion para poder usar el context
-//Podemos definirlo como un Hook Personalizado.
-//Exportar la funcion que almacena el Hook useContext
-export const useCartContext = () => useContext((CartContext));
-
-//Crear el componente del contexto proveedor
- const CartProvider = ( {children} ) => {
-  //Estado del CartProvider
-  const [cart, setCart] = useState([]);
-
-  const mostrarMensaje = () =>{
-    console.log("Mensaje proveniente del proovedor del contexto");
-  }
-
-  //Funciones de nuestro CartProvider
-  console.log(cart);
-  
-
-
-  const addToCart = (data) => { //Data no esta definida en CartContext, la definimos en ItemDetail. 
-
-      console.log(data);
-
-
-  };
-
-  const cleanCart = () => {
-    setCart([]);
-  };
-
-
-  /*
-
-  
-  const cartList = () =>{ 
-    return cart
-  }
-
-  
-
-  const itemsInCart = () =>{
-    console.log(cart) 
-  }
-
-  const deleteFromCart = (id) => {
-    const newList = cart.filter((e) => e.id !== id);
-    setCart(newList);
-  };
-
-  
-
-  
-  const validateProduct = (id) => {
-    if (cart.find((e) => e.id === id)) {
-      return true;
-    } else {
-      return false;
+  const addItem = (item, quantity) => {
+    const newItem = isInCart(item);
+    if (newItem) {
+      quantity = quantity + newItem.quantity;
+      setItemsCarrito(
+        itemsCarrito.splice(
+          itemsCarrito.findIndex((element) => element.item.id === item.id),
+          1
+        )
+      );
     }
+    setItemsCarrito([...itemsCarrito, { item, quantity }]);
   };
 
-  */
+  const isInCart = (item) => {
+    return itemsCarrito.find((element) => element.item === item);
+  };
 
-  //Render de mi CartProvider
+  const clear = () => {
+    setItemsCarrito([]);
+  };
+
+  const removeItem = (itemId) => {
+    setItemsCarrito(
+      itemsCarrito.filter((element) => element.item.id !== itemId)
+    );
+  };
+
+  const totalProducts = () => {
+    const totalProducts = itemsCarrito.reduce(
+      (acc, item) => acc + item.quantity,
+      0
+    );
+    return totalProducts;
+  };
+
   return (
-    <CartContext.Provider value={{ cart, mostrarMensaje, addToCart, cleanCart }}>
+    <GContext.Provider value={{ addItem, itemsCarrito, clear, totalProducts, removeItem }}>
       {children}
-    </CartContext.Provider>
+    </GContext.Provider>
   );
 };
 
-export default CartProvider;
+export default CartContext;

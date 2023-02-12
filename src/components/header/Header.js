@@ -7,12 +7,18 @@ import CartWidget from "./CartWidget";
 import SocialMedia from "./SocialMedia";
 import TopHeader from "../header/TopHeader";
 
+import React from "react";
+import { useContext } from "react";
+import { GContext } from "../../context/CartContext";
+
 import "./NavBar.css";
 import "./hover.css"
 
 
 
 function Header() {
+  
+  const {quantityItems} = useContext(GContext)
 
   return (
     <header>

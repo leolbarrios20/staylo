@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 //Logic
 
 export const Item = (props) => {
+  
   const { title, price, priceBefore, img, id } = props.data;
 
   return (

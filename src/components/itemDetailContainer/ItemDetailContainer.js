@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
         <BsFillArrowLeftCircleFill color="black" size={30}/>
       </Link>
       <div className="container col-12">
-        <ItemDetail data={product} />
+        <ItemDetail item={product} />
       </div>
     </section>
   );

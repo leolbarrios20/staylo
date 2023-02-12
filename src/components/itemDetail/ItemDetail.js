@@ -11,9 +11,9 @@ import RapiPago from "../assets/img/rapipago.png";
 
 import ScrollToTop from "react-scroll-to-top";
 
-import { useCartContext } from "../../context/CartContext";
+import { GContext } from "../../context/CartContext";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import ItemCount from "../itemCount/ItemCount";
 import ItemSizes from "../itemSizes/ItemSizes";
@@ -23,11 +23,16 @@ import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import Form from "react-bootstrap/Form";
 import { Spinner } from "react-bootstrap";
 
-const ItemDetail = (props) => {
+const ItemDetail = ({ item }) => {
+  const { addItem } = useContext(GContext);
+
+  const onAdd = (cant) => {
+    addItem(item, cant);
+  };
+
   function CoolPage() {
     return (
       <div>
@@ -41,47 +46,8 @@ const ItemDetail = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [show2, setShow2] = useState(false);
 
-  const handleClose2 = () => setShow2(false);
-  const handleShow2 = () => setShow2(true);
   //////////////////////////////////////////////////////
-
-  const [cantidadProductosAComprar, setCantidadProductosAComprar] = useState(0);
-
-  const { id, title, price, img, stock, description, category } = props.data;
-
-  const funcionDelHijoDeGuardarCantidad = (cantidadX) => {
-    setCantidadProductosAComprar(cantidadX);
-  };
-
-  useEffect(() => {
-    console.log(
-      `Estamos en item detail y el contador es ${cantidadProductosAComprar}, vas a agregar al carrito un total de ${
-        cantidadProductosAComprar * price
-      }`
-    );
-  }, [cantidadProductosAComprar, price]);
-
-  const { cart, mostrarMensaje, addToCart } = useCartContext(0);
-
-  const onAdd = () => {
-    const product = {
-      id: id,
-      title: title,
-      price: price,
-      category: category,
-      img: img,
-      stock: stock,
-      count: cantidadProductosAComprar,
-    };
-
-    addToCart(product);
-    handleShow2();
-    mostrarMensaje();
-    console.log(cart);
-    cart.push(product);
-  };
 
   //useState para loader.
   const [loading, setLoading] = useState(false);
@@ -104,6 +70,7 @@ const ItemDetail = (props) => {
       ) : (
         <section>
           <article className="Container container row mx-auto">
+            
             {/* 
           <div className="ColumnImage">
           <Link>
@@ -123,7 +90,7 @@ const ItemDetail = (props) => {
           </Link>
         </div>
         */}
-            <img alt="" className="ImageDetail" src={img}></img>
+            <img alt="" className="ImageDetail" src={item.img}></img>
 
             <div className="DetailContainer">
               <nav className="NavDetail">
@@ -131,17 +98,17 @@ const ItemDetail = (props) => {
                 <span>/</span>
                 <Link to="/products/">Productos</Link>
                 <span>/</span>
-                <p> {title} </p>
+                <p> {item.title} </p>
               </nav>
 
               <div className="TitleHeartFlex">
-                <h3> {title} </h3>
+                <h3> {item.title} </h3>
                 <ItemHeart />
               </div>
 
-              <h4>${price}</h4>
+              <h4>${item.price}</h4>
 
-              <h5 className="DetailDescription"> {description} </h5>
+              <h5 className="DetailDescription"> {item.description} </h5>
               <p className="DiscountContainer">
                 {" "}
                 <span className="AmountDiscount">10%</span> de descuento pagando
@@ -176,7 +143,7 @@ const ItemDetail = (props) => {
                   <div className="CreditCardsContainer">
                     <p>
                       Hasta 18 cuotas o 1 pago de{" "}
-                      <span className="SpanClass">${price}</span>
+                      <span className="SpanClass">${item.price}</span>
                     </p>
                     <div className="CreditCardsImg">
                       <img alt="" src={MasterCard}></img>
@@ -188,7 +155,7 @@ const ItemDetail = (props) => {
                   <h6>Tarjetas de débito</h6>
                   <div className="CreditCardsContainer">
                     <p>
-                      Precio: <span className="SpanClass">${price}</span>
+                      Precio: <span className="SpanClass">${item.price}</span>
                     </p>
                     <div className="CreditCardsImg">
                       <img alt="" src={Maestro}></img>
@@ -200,7 +167,7 @@ const ItemDetail = (props) => {
                   <h6>Efectivo</h6>
                   <div className="CreditCardsContainer">
                     <p>
-                      Precio: <span className="SpanClass">${price}</span>
+                      Precio: <span className="SpanClass">${item.price}</span>
                     </p>
                     <div className="CreditCardsImg">
                       <img alt="" src={PagoFacil}></img>
@@ -230,43 +197,21 @@ const ItemDetail = (props) => {
 
               <Form.Group className="mt-3">
                 <ItemCount
-                  stock={stock}
-                  guardarCantidadAComprar={funcionDelHijoDeGuardarCantidad}
+                  product={item}
+                  stock={item.stock}
+                  onAdd={onAdd}
+                  initial={1}
                 />
               </Form.Group>
               <p>
-                Quedan <span className="StockProduct">{stock} </span> unidades
-                disponibles de este producto{" "}
+                Quedan <span className="StockProduct">{item.stock} </span>{" "}
+                unidades disponibles de este producto{" "}
               </p>
-              <Button variant="dark" className="OnAdd" onClick={onAdd}>
-                Agregar al carrito <AiOutlineShoppingCart size={23}/>
-              </Button>
 
-              <Modal className="OnAdd" show={show2} onHide={handleClose2} animation={false}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Continuar compra</Modal.Title>
-                </Modal.Header>
-                <Modal.Body className="ModalBody">
-                  Agregaste un/a <strong>{title}</strong> al carrito!
-                  <img alt="" src={img} ></img>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button variant="danger" onClick={handleClose2}>
-                    Cancelar
-                  </Button>
-                  <Link to="/products">
-                    <Button variant="primary">Agregar mas productos</Button>
-                  </Link>
-                  <Button variant="success" onClick={handleClose2}>
-                    Ver carrito
-                  </Button>
-
-                </Modal.Footer>
-              </Modal>
+            
             </div>
           </article>
           <ItemSizes />
-          
           {CoolPage()}
         </section>
       )}

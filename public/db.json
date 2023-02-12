@@ -54,7 +54,7 @@
       "category": "Sublimated",
       "description": "Sublimada en algodon",
       "img": "../data/multimedia/4.jpg",
-      "stock": 1
+      "stock": 7
     },
     {
       "id": 5,
@@ -181,56 +181,7 @@
       "description": "Sublimada en algodon",
       "img": "../data/multimedia/Buzo4.jpg",
       "stock": 3
-    },
-
-
-
-    {
-      "id": 20,
-      "title": "Buzo Monkey Hat",
-      "color": "Grey",
-      "price": 6200,
-      "priceBefore": "$7.000",
-      "category": "Hoodie",
-      "description": "Sublimada en algodon",
-      "img": "../data/multimedia/Buzo4.jpg",
-      "stock": 3
-    },
-    {
-      "id": 17,
-      "title": "Buzo Monkey Hat",
-      "color": "Grey",
-      "price": 6200,
-      "priceBefore": "$7.000",
-      "category": "Hoodie",
-      "description": "Sublimada en algodon",
-      "img": "../data/multimedia/Buzo4.jpg",
-      "stock": 3
-    },
-    {
-      "id": 18,
-      "title": "Buzo Monkey Hat",
-      "color": "Grey",
-      "price": 6200,
-      "priceBefore": "$7.000",
-      "category": "Hoodie",
-      "description": "Sublimada en algodon",
-      "img": "../data/multimedia/Buzo4.jpg",
-      "stock": 3
-    },
-    {
-      "id": 19,
-      "title": "Buzo Monkey Hat",
-      "color": "Grey",
-      "price": 6200,
-      "priceBefore": "$7.000",
-      "category": "Hoodie",
-      "description": "Sublimada en algodon",
-      "img": "../data/multimedia/Buzo4.jpg",
-      "stock": 3
     }
-
-
   ]
 }
 

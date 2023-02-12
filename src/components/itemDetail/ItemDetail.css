@@ -9,7 +9,6 @@
 .ModalBody{
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .ModalBody img{
@@ -43,9 +42,6 @@
   }
   
 
-  .OnAdd{
-    transform: translate(0, 20%);
-  }
 
 
 .ColumnImage {
@@ -229,3 +225,4 @@ p .StockProduct{
 .DetailDescription{
   font-size: 16px;
 }
+

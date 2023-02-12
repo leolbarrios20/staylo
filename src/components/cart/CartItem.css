@@ -1,0 +1,29 @@
+
+
+
+.CartItemImg{
+    max-width: 120px;
+    max-height: 170px;
+}
+
+.CartSpecsContainer{
+    display: flex;
+    gap: 20px;
+}
+
+.DetailCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.ItemTitle{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.RemoveItem{
+    cursor: pointer;
+}

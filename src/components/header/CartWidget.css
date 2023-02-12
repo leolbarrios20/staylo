@@ -1,3 +1,4 @@
+
 .CartWidget .Circle {
   border: solid rgb(0, 0, 0) 1px;
   width: 23px;
@@ -55,6 +56,10 @@
   text-decoration: underline;
 }
 
-.BodyCanvas{
-  width: 800px;
+
+
+
+.SeeCart{
+  transform: translate(2px, 5px);
+
 }

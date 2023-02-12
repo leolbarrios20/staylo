@@ -11,7 +11,7 @@ import "./index.css";
 //Componentes
 
 /*Context*/
-import CartProvider from "./context/CartContext";
+import CartContext from "./context/CartContext";
 
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
@@ -29,8 +29,7 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-
-    <CartProvider>
+    <CartContext>
       <HashRouter>
         <Header />
         <Routes>
@@ -57,8 +56,7 @@ root.render(
         </Routes>
         <Footer />
       </HashRouter>
-    </CartProvider>
-
+    </CartContext>
   </React.StrictMode>
 );
 

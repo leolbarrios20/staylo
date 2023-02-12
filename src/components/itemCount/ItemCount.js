@@ -1,35 +1,32 @@
+import React, {useState } from "react";
+import { Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import { useState } from "react";
+import "./ItemCount.css";
+
+const ItemCount = ({initial , stock, onAdd, product, quantity  }) => {
 
 
-import "./ItemCount.css"
+  const [show, setShow] = useState(false);
 
-export const ItemCount = (props) => {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-  
+  const [countProducts, setCountProducts] = useState(initial);
 
-
-  const [count, setCount] = useState(0);
 
   const add = () => {
-    if (count < props.stock) {
-      setCount(count + 1);
-      props.guardarCantidadAComprar(count)
-
-      console.log(count)
+    if (countProducts < stock) {
+      setCountProducts(countProducts + 1);
     }
   };
 
   const subtract = () => {
-    if (count > 0) {
-      setCount(count - 1);
-      props.guardarCantidadAComprar(count)
-      console.log(count)
-      console.log(props.data.price)
+    if (countProducts > 0) {
+      setCountProducts(countProducts - 1);
     }
   };
-
-
 
   return (
     <div className="CountContainer">
@@ -37,12 +34,38 @@ export const ItemCount = (props) => {
         <button className="Subtract" onClick={subtract}>
           -
         </button>
-        <span>{count}</span>
+        <span>{countProducts}</span>
         <button className="Add" onClick={add}>
           +
         </button>
       </div>
+      <div onClick={handleShow}>
+      <Button disabled={countProducts === 0} className="OnAdd" variant="dark">Agregar al Carrito <AiOutlineShoppingCart size={23}/></Button>
+      </div>
+      
+      <>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title className="ModalTitle">Deseas agregar este producto al carrito?</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{product.title}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="danger" onClick={handleClose}>
+            Cancelar
+          </Button>
+          <div onClick={()=>onAdd(countProducts)} >
+
+          <Button  variant="success" onClick={handleClose}>
+            Agregar
+          </Button>
+
+          </div>
+
+        </Modal.Footer>
+      </Modal>
+    </>
     </div>
+
   );
 };
 

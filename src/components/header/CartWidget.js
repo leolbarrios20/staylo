@@ -1,37 +1,63 @@
-import { GiShoppingCart } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
 
-import React, { useState } from "react";
+import { GContext } from "../../context/CartContext";
+
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-import "../header/CartWidget.css";
-import { Nav } from "react-bootstrap";
+import CartItem from "../cart/CartItem";
 
-export const CartWidget = (props) => {
-  
+import { Nav, Button } from "react-bootstrap";
+
+import { Link } from "react-router-dom";
+
+import { GiShoppingCart } from "react-icons/gi";
+
+import "../header/CartWidget.css";
+
+import "../cart/Cart.css";
+
+export const CartWidget = () => {
+  const { itemsCarrito, clear, totalProducts } = useContext(GContext);
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
-
-
     <div className="CartWidgetContainer">
       <Link onClick={handleShow} className="CartWidget">
         <GiShoppingCart size={35} color="white" />
-        <div className="Circle"> {props.amount} </div>
-        <p>Ver carrito</p>
+        {itemsCarrito.length > 0 && (
+          <>
+            <div className="Circle"> {totalProducts()} </div>
+          </>
+        )}
+
+        <p className="SeeCart">Ver carrito</p>
       </Link>
       <Offcanvas className="OffCanvas" show={show} onHide={handleClose}>
         <Offcanvas.Header className="OffCanvasHeader" closeButton>
           <Offcanvas.Title className="OffCanvasTitle">Carrito</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="OffCanvasBody">
-          <p className="mb-0 OffCanvasP">El carrito de compras está vacio</p>
-          <Nav.Link className="OffCanvasLink" href="/#/products">
-            Volver a la tienda
-          </Nav.Link>
+          {itemsCarrito.length > 0 ? (
+            <div>
+              <section className="Cart">
+                {itemsCarrito.map((element) => (
+                  <CartItem key={element.item.id}  item={element.item} quantity={element.quantity} />
+                ))}
+              </section>
+              <Nav.Link className="OffCanvasLink" href="/#/products">
+                Ir a la tienda
+              </Nav.Link>
+              <Button onClick={() => clear()}>Vaciar carrito</Button>
+            </div>
+          ) : (
+            <div>
+              <p className="mb-0 OffCanvasP">El carrito de compras se encuentra vacio</p>
+            </div>
+          )}
         </Offcanvas.Body>
       </Offcanvas>
     </div>
