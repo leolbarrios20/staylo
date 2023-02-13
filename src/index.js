@@ -21,7 +21,6 @@ import Shipping from "./components/main/Shipping";
 import Services from "./components/main/Services";
 import AboutUs from "./components/main/AboutUs";
 import Footer from "./components/footer/Footer";
-import CartListContainer from "./components/cart/CartListContainer";
 
 //Core
 import reportWebVitals from "./reportWebVitals";
@@ -42,7 +41,6 @@ root.render(
           <Route exact path="/services" element={<Services />} />
           <Route exact path="/about-us" element={<AboutUs />} />
           <Route exact path="/products" element={<ItemListContainer />} />
-          <Route exact path="/cart" element={<CartListContainer />} />
           <Route
             exact
             path="/product/:productId"

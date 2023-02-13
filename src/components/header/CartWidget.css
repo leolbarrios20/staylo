@@ -63,3 +63,31 @@
   transform: translate(2px, 5px);
 
 }
+
+.ClearCartButton{
+  display: grid;
+  align-self: center;
+}
+
+.ClearCartButton .AddMoreProducts{
+  text-align: center;
+  margin-bottom: 10%;
+  text-decoration: none;
+  font-weight: 700;
+} 
+
+.EmptyCart a{
+  display: grid;
+  align-self: center;
+  text-decoration: none;
+}
+
+.EmptyCart Button{
+  margin-top: 20px;
+}
+
+.GoToPay a{
+  display: grid;
+  align-self: center;
+  margin-top: 10%;
+}

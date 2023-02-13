@@ -27,7 +27,7 @@ export const Item = (props) => {
             </Card.Text>
             <ItemHeart/>
           </div>
-          <Card.Text className="CardPrice">${price} </Card.Text>
+          <Card.Text className="CardPrice">${(price).toFixed(2)} </Card.Text>
           <Card.Text className="CardDesc"> </Card.Text>
           <Link to={`/product/${id}`} className="Link">
             <Button variant="dark">Ver detalle del producto</Button>

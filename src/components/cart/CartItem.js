@@ -2,6 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 
+
 import { GContext } from "../../context/CartContext";
 
 import { BsTrash } from "react-icons/bs";
@@ -39,8 +40,11 @@ const CartItem = ({ item, quantity }) => {
         </div>
         <div>
           <p className="RemoveItem" onClick={()=>removeItem(item.id)}><BsTrash size={25}/></p>
+          
         </div>
+        
       </div>
+      
       )
     }
       
