@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { Spinner } from "react-bootstrap";
+import Visa from "../assets/img/visa.png";
 
 import { BsArrowRight } from "react-icons/bs";
 
@@ -29,8 +30,7 @@ const CartListContainer = () => {
   useEffect(() => {
     if (getTotal() > 15000) {
       setDelivery(true);
-    }
-    else {
+    } else {
       setDelivery(false);
     }
   }, [getTotal]);
@@ -51,9 +51,13 @@ const CartListContainer = () => {
                     <div className="CartItemLeft">
                       <h3 className="CartTitle">Tu Carrito</h3>
                       <p>
-                        TOTAL 
-                        
-                        <strong> { "( "}{totalProducts()}{" Producto/s )" } </strong>
+                        TOTAL
+                        <strong>
+                          {" "}
+                          {"( "}
+                          {totalProducts()}
+                          {" Producto/s )"}{" "}
+                        </strong>
                         por un total de ${getTotal()}
                       </p>
                       <p>
@@ -72,10 +76,8 @@ const CartListContainer = () => {
                 </section>
                 <div className="CartItemRight">
                   <Button variant="dark" className="GoToPay">
-                    <Link className="PayEnd"> 
-                      FINALIZAR COMPRA
-                    </Link>
-                    
+                    <Link className="PayEnd">FINALIZAR COMPRA</Link>
+
                     <BsArrowRight size={25} />
                   </Button>
                   <div className="ButtonFlex">
@@ -95,7 +97,7 @@ const CartListContainer = () => {
 
                   <p className="Resume">Resumen del pedido</p>
                   <div className="ProductsPriceFlex">
-                    <p > {totalProducts()} productos  </p>
+                    <p> {totalProducts()} productos </p>
                     <p> ${getTotal()} </p>
                   </div>
                   {delivery ? (
@@ -104,7 +106,9 @@ const CartListContainer = () => {
                         <p className="Delivery">ENTREGA</p>
                         <p className="FreeOrPrice">Gratis</p>
                       </div>
-                      <p>La entrega es gratis porque la compra es mayor a $15000</p>
+                      <p>
+                        La entrega es gratis porque la compra es mayor a $15000
+                      </p>
                     </div>
                   ) : (
                     <div className="DeliveryFlex">
@@ -126,6 +130,12 @@ const CartListContainer = () => {
                       </p>
                     </div>
                   )}
+                  <div>
+                    <h6>Opciones de pago</h6>
+                    <img alt="" src={Visa}></img>
+                    <img alt="" src={Visa}></img>
+                    <img alt="" src={Visa}></img>
+                  </div>
                 </div>
               </div>
             ) : (
