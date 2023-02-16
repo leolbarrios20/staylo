@@ -1,13 +1,22 @@
-import React from "react";
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GContext } from "../../context/CartContext";
+
 import CartItem from "./CartItem";
+
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { Spinner } from "react-bootstrap";
-import Visa from "../assets/img/visa.png";
-
 import { BsArrowRight } from "react-icons/bs";
+
+import Cabal from "../assets/img/cabal.png";
+import MasterCard from "../assets/img/mastercard.png";
+import TarjetShopping from "../assets/img/tarjeta-shopping.png";
+import Naranja from "../assets/img/naranja.png";
+import Visa from "../assets/img/visa.png";
+import Maestro from "../assets/img/maestro.png";
+import PagoFacil from "../assets/img/pagofacil.png";
+import RapiPago from "../assets/img/rapipago.png";
+
 
 import "./CartListContainer.css";
 
@@ -130,11 +139,17 @@ const CartListContainer = () => {
                       </p>
                     </div>
                   )}
-                  <div>
+                  <div className="CartPaymenthMethods">
                     <h6>Opciones de pago</h6>
                     <img alt="" src={Visa}></img>
-                    <img alt="" src={Visa}></img>
-                    <img alt="" src={Visa}></img>
+                    <img alt="" src={Naranja}></img>
+                    <img alt="" src={TarjetShopping}></img>
+                    <img alt="" src={MasterCard}></img>
+                    <img alt="" src={Cabal}></img>
+                    <img alt="" src={Maestro}></img>
+                    <img alt="" src={PagoFacil}></img>
+                    <img alt="" src={RapiPago}></img>
+
                   </div>
                 </div>
               </div>

@@ -1,11 +1,12 @@
 .EmptyCart{
     text-align: center;
     height: 70vmin;
+    transform: translate(0px, 100px);
 }
 
 .EmptyCartP{
     margin-top: 50px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .Cart{
@@ -28,6 +29,7 @@
 
 .CartItemLeft{
     max-width: 500px;
+    margin: 0 50px;
 }
 
 
@@ -103,4 +105,9 @@
 .PayEnd{
     text-decoration: none;
     color: white;
+}
+
+.CartPaymenthMethods img{
+    max-width: 60px;
+    margin-right: 10px;
 }
