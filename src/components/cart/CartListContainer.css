@@ -1,0 +1,103 @@
+.EmptyCart{
+    text-align: center;
+    height: 70vmin;
+}
+
+.EmptyCartP{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.Cart{
+    display: flex;
+    gap: 5%;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+@media (max-width: 1150px) {
+    .Cart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5%;
+    }
+  }
+
+.CartItemLeft{
+    max-width: 500px;
+}
+
+
+.CartItemRight{
+    width: 500px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1150px) {
+    .CartItemRight {
+        margin-top: -150px;
+    }
+  }
+
+
+.CartTitle{
+    font-weight: 700;
+    font-size: 37px;
+}
+
+.GoToPay{
+
+    border-radius: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 600;
+}
+
+.ProductsPriceFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProductsPriceFlex p{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.DeliveryFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.DeliveryFlex .Delivery{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.DeliveryFlex .FreeOrPrice{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.Resume{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.ButtonFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+ .StrongProducts{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.PayEnd{
+    text-decoration: none;
+    color: white;
+}

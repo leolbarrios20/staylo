@@ -1,53 +1,50 @@
-
-import React, { useContext, useEffect, useState } from "react";
-import { Spinner } from "react-bootstrap";
-
+import React, { useContext } from "react";
 
 import { GContext } from "../../context/CartContext";
-
 import { BsTrash } from "react-icons/bs";
 
 import "./CartItem.css";
 
 const CartItem = ({ item, quantity }) => {
+  const { removeItem } = useContext(GContext);
 
-  const {removeItem} = useContext(GContext)
+  /*
+  const [quantityItem, setQuantityItem] = useState(quantity);
 
-  const [loading, setLoading] = useState(false);
+  const add = () => {
+    setQuantityItem(quantityItem + 1);
+    console.log(quantity);
+  };
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  }, []);
-
+  const subtract = () => {
+    if (quantityItem > 0) {
+      setQuantityItem(quantityItem - 1);
+    }
+    if (quantityItem < 2) {
+      removeItem(item.id);
+    }
+  };
+*/
   return (
     <section className="CartItem">
-      {loading ? (
-            <div className="SpinnerContainer">
-            <Spinner />
+      <div className="CartSpecsContainer">
+        <div className="CartFlex">
+          <img className="CartImg" alt="" src={item.img}></img>
+          <div className="CartDetailFlex">
+            <h6>Producto: {item.title} </h6>
+            <h6>Precio p/u: ${item.price} </h6>
+            <h6>Precio total: ${item.price * quantity} </h6>
+            <h6> {item.description} </h6>
+            <div className="QuantityFlex">
+              <p>Cantidad: {quantity} </p>
+              <BsTrash size={25}
+                className="RemoveItem"
+                onClick={() => removeItem(item.id)}
+              />
+            </div>
           </div>
-      ):(
-        <div className="CartSpecsContainer">
-        <img className="CartItemImg" src={item.img} alt=""></img>
-        <div className="DetailCart">
-          <h5 className="ItemTitle">{item.title}</h5>
-            <p>Talle:</p>
-            <p>Cantidad: {quantity} </p>
-          <p>Precio p/u: ${parseFloat(item.price).toFixed(2)} </p>
-          <p>Precio total: ${parseFloat(item.price * quantity).toFixed(2)} </p>
         </div>
-        <div>
-          <p className="RemoveItem" onClick={()=>removeItem(item.id)}><BsTrash size={25}/></p>
-          
-        </div>
-        
       </div>
-      
-      )
-    }
-      
     </section>
   );
 };

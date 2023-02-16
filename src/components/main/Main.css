@@ -1,5 +1,5 @@
 .SpinnerContainer{
-    height: 80vh;
+    height: 75vh;
     display: grid;
     place-content: center;
 }
@@ -11,7 +11,7 @@
   }
 
   .SpinnerMain{
-    height: 66vh;
+    height: 80vh;
     display: grid;
     place-content: center;
   }

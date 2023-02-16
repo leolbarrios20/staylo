@@ -1,29 +1,33 @@
-
-
-
-.CartItemImg{
-    max-width: 120px;
-    max-height: 170px;
+.CartImg{
+    max-width: 200px;
 }
 
-.CartSpecsContainer{
+.CartFlex{
     display: flex;
+    gap: 20px;
+    border: black 1px solid;
+}
+
+.TitlePriceFlex{
+    display: flex;
+    align-items: center;
     gap: 20px;
 }
 
-.DetailCart{
+.CartDetailFlex{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: center;
-}
-
-.ItemTitle{
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 10px;
+    align-items: flex-start;
+    padding: 10px;
 }
 
 .RemoveItem{
     cursor: pointer;
+}
+
+.QuantityFlex{
+    display: flex;
+    gap: 100px;
+    align-content: center;
 }

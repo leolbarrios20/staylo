@@ -17,6 +17,7 @@ import Header from "./components/header/Header";
 import Main from "./components/main/Main";
 import ItemListContainer from "./components/itemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer";
+import CartListContainer from "./components/cart/CartListContainer";
 import Shipping from "./components/main/Shipping";
 import Services from "./components/main/Services";
 import AboutUs from "./components/main/AboutUs";
@@ -46,11 +47,14 @@ root.render(
             path="/product/:productId"
             element={<ItemDetailContainer />}
           />
+          <Route exact path="/cart" element={<CartListContainer />} />
+          
           <Route
             exact
             path="/products/:categoryId"
             element={<ItemListContainer />}
           />
+
         </Routes>
         <Footer />
       </HashRouter>

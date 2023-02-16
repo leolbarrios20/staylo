@@ -1,11 +1,11 @@
-import "../header/TopHeader.css"
+import "../footer/TopFooter.css"
 
 import { FaRegMoneyBillAlt } from "react-icons/fa";
 import { FaTruck } from "react-icons/fa";
 
-const TopHeader = () =>{
+const TopFooter = () =>{
     return(
-        <div className="TopHeader">
+        <div className="TopFooter">
         <p>
           <span>
             <FaTruck className="TruckIcon" size={25} />
@@ -22,4 +22,4 @@ const TopHeader = () =>{
     )
 }
 
-export default TopHeader;
+export default TopFooter;

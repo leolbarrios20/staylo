@@ -7,12 +7,19 @@
   background-image: url(../assets/img/background3.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size:cover;
   background-attachment: fixed;
   background-color: rgba(0, 0, 0, 0.214);
   background-blend-mode: darken;
 }
 
+@media (max-width: 990px) {
+  .Background {
+    background-position: 70%;
+    background-color: rgba(0, 0, 0, 0.614);
+    height: 80vh;
+}
+}
 .Background div{
   transform: translate(-15%, -10%);
   display: flex;

@@ -2,7 +2,8 @@ import "./ItemDetailContainer.css";
 
 import ItemDetail from "../itemDetail/ItemDetail";
 import { Link } from "react-router-dom";
-
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../services/firebase";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -15,11 +16,19 @@ const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
   const { productId } = useParams();
 
-  useEffect(() => {
-    fetch('../db.json')
-    .then(res=>res.json())
-    .then(data=>setProduct(data.products.find((item) => item.id === parseInt(productId))))
-  }, [productId]);
+  useEffect(()=>{
+    const getProduct = async()=>{
+        const queryRef = doc(db,"productsList",productId);
+        const response = await getDoc(queryRef);
+        const newDoc = {
+            id:response.id,
+            ...response.data()
+        }
+        setProduct(newDoc);
+
+    }
+    getProduct();
+},[productId])
 
   return (
     <section>

@@ -1,12 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 
 import { GContext } from "../../context/CartContext";
-
-import Offcanvas from "react-bootstrap/Offcanvas";
-
-import CartItem from "../cart/CartItem";
-
-import { Button } from "react-bootstrap";
 
 import { Link } from "react-router-dom";
 
@@ -14,19 +8,15 @@ import { GiShoppingCart } from "react-icons/gi";
 
 import "../header/CartWidget.css";
 
-import "../cart/Cart.css";
+import "../cart/CartListContainer";
 
 export const CartWidget = () => {
-  const { itemsCarrito, clear, totalProducts } = useContext(GContext);
-
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
+  const { itemsCarrito, totalProducts } = useContext(GContext);
 
   return (
     <div className="CartWidgetContainer">
-      <Link onClick={handleShow} className="CartWidget">
+      <Link to="/cart" className="CartWidget">
         <GiShoppingCart size={35} color="white" />
         {itemsCarrito.length > 0 && (
           <>
@@ -34,8 +24,9 @@ export const CartWidget = () => {
           </>
         )}
       </Link>
-      <Offcanvas  className="OffCanvas" show={show} onHide={handleClose}>
-        <Offcanvas.Header className="OffCanvasHeader" closeButton>
+{      /*
+<Offcanvas  className="OffCanvas" show={show} onHide={handleClose}>
+        <Offcanvas.Header className="OffCanvasHeader" >
           <Offcanvas.Title className="OffCanvasTitle">Carrito</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className="OffCanvasBody">
@@ -50,8 +41,9 @@ export const CartWidget = () => {
                   />
                 ))}
               </section>
+              <p>Total a pagar : ${getTotal()} </p>
               <div className="ClearCartButton">
-              <Link className="AddMoreProducts" onClick={handleClose} to="/products">Agregar mas productos</Link>
+              <Link className="AddMoreProducts" onClick={handleClose}  to="/products">Agregar mas productos</Link>
                 <Button  variant="dark" onClick={() => clear()}>
                   Vaciar carrito
                 </Button>
@@ -77,7 +69,7 @@ export const CartWidget = () => {
             
           )}
         </Offcanvas.Body>
-      </Offcanvas>
+          </Offcanvas>*/}
     </div>
   );
 };

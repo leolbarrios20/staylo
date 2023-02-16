@@ -10,7 +10,7 @@ import PagoFacil from "../assets/img/pagofacil.png";
 import RapiPago from "../assets/img/rapipago.png";
 
 import ScrollToTop from "react-scroll-to-top";
-
+import Select from "react-select";
 import { GContext } from "../../context/CartContext";
 
 import React, { useState, useEffect, useContext } from "react";
@@ -27,6 +27,7 @@ import Form from "react-bootstrap/Form";
 import { Spinner } from "react-bootstrap";
 
 const ItemDetail = ({ item }) => {
+
   const { addItem } = useContext(GContext);
 
   const onAdd = (cant) => {
@@ -46,11 +47,12 @@ const ItemDetail = ({ item }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
   //////////////////////////////////////////////////////
 
   //useState para loader.
   const [loading, setLoading] = useState(false);
+
+
 
   useEffect(() => {
     setLoading(true);
@@ -61,6 +63,24 @@ const ItemDetail = ({ item }) => {
 
   //////////////////////////////////////////////////////
 
+    //////////////////////////////////////////////////////
+  //useState para form en talle.
+
+  const [selectedSizes, setSelectedSizes] = useState();
+
+  const handleSelectChange = ({ value }) => {
+    console.log(value);
+    setSelectedSizes(value);
+  };
+
+  const sizes = [
+    { label: "S", value: "Small" },
+    { label: "M", value: "Medium" },
+    { label: "L", value: "Large" },
+    { label: "XL", value: "Extra Large" },
+    { label: "XXL", value: "Extra Extra Large" },
+  ];
+
   return (
     <div>
       {loading ? (
@@ -70,7 +90,6 @@ const ItemDetail = ({ item }) => {
       ) : (
         <section>
           <article className="Container container row mx-auto">
-            
             {/* 
           <div className="ColumnImage">
           <Link>
@@ -182,17 +201,14 @@ const ItemDetail = ({ item }) => {
                 </Modal.Footer>
               </Modal>
               <div className="FormContainer">
-                <Form.Select aria-label="Default select example">
-                  <option value="2">S</option>
-                  <option value="3">M</option>
-                  <option value="3">L</option>
-                  <option value="3">XL</option>
-                </Form.Select>
-                <Form.Select aria-label="Default select example">
-                  <option>COLOR</option>
-                  <option value="1">BLANCO</option>
-                  <option value="2">NEGRO</option>
-                </Form.Select>
+                <div>
+                  <p className="SizeParagraph"> Talle: {selectedSizes} </p>
+                  <Select 
+                  className="Select"
+                  defaultValue={{ label: "Seleccioná un talle", value: "Seleccion" }}
+                  options={sizes} 
+                  onChange={handleSelectChange} />
+                </div>
               </div>
 
               <Form.Group className="mt-3">
@@ -200,15 +216,13 @@ const ItemDetail = ({ item }) => {
                   product={item}
                   stock={item.stock}
                   onAdd={onAdd}
-                  initial={1}
+                  initial={0}
                 />
               </Form.Group>
               <p>
                 Quedan <span className="StockProduct">{item.stock} </span>{" "}
                 unidades disponibles de este producto{" "}
               </p>
-
-            
             </div>
           </article>
           <ItemSizes />

@@ -17,13 +17,13 @@ import { FiMail } from "react-icons/fi";
 import { GoLocation } from "react-icons/go";
 
 import FooterBottom from "./FooterBottom";
+import TopFooter from "./TopFooter";
 
 function Footer() {
   return (
     <footer>
+      <TopFooter/>
       <section className="Footer" >
-
-      
       <div className="FooterLeft">
         <div className="PaymentsMethods">
           <p className="FooterTitles">Medios de pago</p>

@@ -43,7 +43,7 @@ const ItemCount = ({ initial, stock, onAdd, product }) => {
       </div>
 
       <>
-        <Modal show={show} onHide={handleClose}>
+        <Modal className="Modal" show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title className="ModalTitle">
               Deseas agregar este producto al carrito?
@@ -66,6 +66,7 @@ const ItemCount = ({ initial, stock, onAdd, product }) => {
             </div>
           </Modal.Footer>
         </Modal>
+        
       </>
     </div>
   );

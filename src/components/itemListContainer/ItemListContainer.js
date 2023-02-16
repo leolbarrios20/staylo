@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase";
+
 import { Link } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 
@@ -20,19 +23,30 @@ import "../itemListContainer/ItemListContainer.css";
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
+
+
   useEffect(() => {
-    fetch("../db.json")
-      .then((res) => res.json())
-      .then((json) => {
-        if (categoryId) {
-          setProducts(
-            json.products.filter((product) => product.category === categoryId)
-          );
-        } else {
-          setProducts(json.products);
-        }
-      });
-  }, [categoryId]);
+    const getData = async () => {
+        const queryRef = categoryId
+            ? query(
+                collection(db, "productsList"),
+                where("category", "==", categoryId)
+            )
+            : collection(db, "productsList");
+
+        // hacer la consulta
+        const response = await getDocs(queryRef);
+        const docsInfo = response.docs.map((doc) => {
+            const newDoc = {
+                id: doc.id,
+                ...doc.data(),
+            };
+            return newDoc;
+        });
+        setProducts(docsInfo);
+    };
+    getData();
+}, [categoryId]);
 
   const [loading, setLoading] = useState(false);
 

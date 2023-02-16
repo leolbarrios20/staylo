@@ -1,4 +1,4 @@
-.TopHeader {
+.TopFooter {
   background-color: #000000;
     color: rgb(243, 243, 243);
     text-align: center;
@@ -8,34 +8,34 @@
     justify-content: space-around;
     align-items: center;
     padding-top: 25px;
-    height: 40px;
+    height: 80px;
   }
   
-  .TopHeader p {
+  .TopFooter p {
     font-size: 13px;
     font-weight: 700;
   }
   
-  .TopHeader p span {
+  .TopFooter p span {
     margin: 0 10px;
   }
   
   @media (max-width: 990px) {
-    .TopHeader{
+    .TopFooter{
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       text-align: left;
       align-items: center;
       height: auto;
-      
+
     }
 
-    .TopHeader p {
+    .TopFooter p {
       font-size: 10px;
     }
 
-    .TopHeader p span {
+    .TopFooter p span {
       margin: 0;
     }
     

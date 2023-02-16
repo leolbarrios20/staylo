@@ -1,9 +1,9 @@
 
 .Container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 40px;
-  
 }
 
 .ModalBody{
@@ -60,6 +60,7 @@
 
 .Modal {
   background-color: rgba(0, 0, 0, 0.519);
+  z-index: 50000;
 }
 
 .Modal .CreditCardsContainer {
@@ -102,11 +103,7 @@
   margin: 0 0 0 5px;
 }
 
-.DetailContainer .FormContainer {
-  display: flex;
-  gap: 2%;
-  margin: 10px 0 0 0;
-}
+
 
 .DetailContainer h4 {
   margin-top: 10px;
@@ -226,3 +223,7 @@ p .StockProduct{
   font-size: 16px;
 }
 
+.SizeParagraph{
+  font-weight: 600;
+  font-size: 20px;
+}
