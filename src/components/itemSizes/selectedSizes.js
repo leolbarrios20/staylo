@@ -2,33 +2,33 @@ import React, {useState} from "react";
 
 import Select from "react-select";
 
-const SelectedSizes = () => {
-  const [selectedSizes, setSelectedSizes] = useState();
+const Paymenths = () => {
+  const [paymenthMethod, setPaymenthMethod] = useState();
 
   const handleSelectChange = ({ value }) => {
     console.log(value);
-    setSelectedSizes(value);
+    setPaymenthMethod(value);
   };
 
-  const sizes = [
-    { label: "S", value: "Small" },
-    { label: "M", value: "Medium" },
-    { label: "L", value: "Large" },
-    { label: "XL", value: "Extra Large" },
-    { label: "XXL", value: "Extra Extra Large" },
+  const paymenths = [
+    { label: "Mercado Pago", value: "Mercado Pago" },
+    { label: "Tarjeta de débito", value: "Tarjeta de débito" },
+    { label: "Tarjeta de crédito", value: "Tarjeta de crédito" },
+    { label: "Pago Fácil (efectivo)", value: "Pago Fácil" },
+    { label: "Rapi Pago (efectivo)", value: "Rapi Pago" },
   ];
 
   return (
     <div>
-      <p className="SizeParagraph"> Talle: {selectedSizes} </p>
+      <p className="SizeParagraph"> Talle: {paymenthMethod} </p>
       <Select
         className="Select"
-        defaultValue={{ label: "L", value: "Large" }}
-        options={sizes}
+        defaultValue={{ label: "Tarjeta de débito", value: "Tarjeta de débito" }}
+        options={paymenths}
         onChange={handleSelectChange}
       />
     </div>
   );
 };
 
-export default SelectedSizes;
+export default Paymenths;

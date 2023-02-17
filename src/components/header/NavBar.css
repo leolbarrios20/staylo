@@ -2,18 +2,10 @@
   border: none;
 }
 
-/*
-header{
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-*/
 .HrHeader {
   color: white;
 }
+
 .NavBar a {
   text-decoration: none;
   color: rgb(163, 163, 163);
@@ -43,7 +35,20 @@ header{
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
-  gap: 100px;
+  margin-left: 300px;
+
+}
+
+@media (max-width: 1230px) {
+  .CartSocialFlex {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .CartSocialFlex {
+    margin-left: 100px;
+  }
 }
 
 @media (max-width: 990px) {
@@ -52,5 +57,38 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-left: 0px;
+  }
+}
+
+.CartSocialResp{
+  margin-right: 100px;
+}
+
+@media (max-width: 1400px) {
+  .CartSocialResp {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 990px) {
+  .CartSocialResp {
+    display: none;
+  }
+}
+
+.NavBar{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.CartWidgetNone {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .CartWidgetNone {
+    display: block;
+    margin-left: -100px;
   }
 }

@@ -1,0 +1,32 @@
+.CartItemForm{
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.PaymenthMethodFlex{
+    display: flex;
+    gap: 10px;
+}
+
+.Select{
+    max-width: 400px;
+}
+
+.FinalBuy{
+    text-align: center;
+    margin: 20px;
+}
+
+.BuyerDataParagraph{
+    font-weight: 600;
+}
+
+.DataReq{
+    font-weight: 700;
+    margin: 20px;
+    width: 180px;
+}

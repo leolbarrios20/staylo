@@ -24,3 +24,14 @@
     font-family: "Agency FB";
     
 }
+
+.ItemListContainer{
+  position: relative;
+  top: 0;
+}
+
+.FilterFlex{
+  display: flex;
+  align-content: center;
+  gap: 30px;
+}

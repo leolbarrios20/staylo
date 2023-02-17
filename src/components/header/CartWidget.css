@@ -35,25 +35,13 @@
   }
 }
 
-.OffCanvasBody {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+
+
+@media (max-width: 990px) {
+  .CartWidgetContainer {
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 0px;
+  }
 }
-
-.OffCanvasTitle {
-  font-weight: 700;
-}
-
-.OffCanvasP {
-  font-weight: 600;
-  text-align: center;
-}
-
-.OffCanvasLink {
-  font-weight: 700;
-  text-align: center;
-  text-decoration: underline;
-}
-
-

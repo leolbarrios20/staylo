@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
 },[productId])
 
   return (
-    <section>
+    <section >
       <Link to="/products" className="Back">
         <BsFillArrowLeftCircleFill color="black" size={30}/>
       </Link>

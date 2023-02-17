@@ -41,14 +41,22 @@ const CartContext = ({ children }) => {
   };
 
   const getTotal = () => {
-    let total = 0
-    itemsCarrito.forEach((e) => total += (e.quantity*e.item.price))
-    return total        
-};
-
+    let total = 0;
+    itemsCarrito.forEach((e) => (total += e.quantity * e.item.price));
+    return total;
+  };
 
   return (
-    <GContext.Provider value={{ itemsCarrito, addItem, clear, totalProducts, removeItem, getTotal }}>
+    <GContext.Provider
+      value={{
+        itemsCarrito,
+        addItem,
+        clear,
+        totalProducts,
+        removeItem,
+        getTotal,
+      }}
+    >
       {children}
     </GContext.Provider>
   );

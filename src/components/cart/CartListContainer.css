@@ -9,11 +9,10 @@
     font-size: 18px;
 }
 
-.Cart{
-    display: flex;
-    gap: 5%;
-    justify-content: center;
-    margin: 70px 10px;
+
+
+.CartItem{
+    margin-bottom: 100px;
 }
 
 @media (max-width: 1150px) {
@@ -28,29 +27,38 @@
   }
 
 .CartItemLeft{
-    max-width: 500px;
-    margin: 0 50px;
+
+    text-align: left;
 }
-
-
-.CartItemRight{
-    width: auto;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-}
-
-@media (max-width: 1150px) {
-    .CartItemRight {
-        margin-top: -150px;
-    }
-  }
-
 
 .CartTitle{
     font-weight: 700;
     font-size: 37px;
+    margin: 40px 0;
 }
+
+.getTotal{
+    font-style: italic;
+}
+.TotalCartDetail{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.TotalCartDetailP{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.CartItemRight{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
 
 .GoToPay{
     border-radius: 0;
@@ -64,11 +72,12 @@
 .ProductsPriceFlex{
     display: flex;
     justify-content: space-between;
+    
 }
 
 .ProductsPriceFlex p{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .DeliveryFlex{
@@ -78,17 +87,17 @@
 
 .DeliveryFlex .Delivery{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .DeliveryFlex .FreeOrPrice{
     font-weight: 500;
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .Resume{
     font-weight: 700;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .ButtonFlex{
@@ -97,10 +106,6 @@
     gap: 100px;
 }
 
- .StrongProducts{
-    font-weight: 700;
-    font-size: 25px;
-}
 
 .PayEnd{
     text-decoration: none;

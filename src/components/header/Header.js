@@ -10,7 +10,7 @@ import React from "react";
 
 import "./NavBar.css";
 import "./hover.css";
-import "./Header.css"
+import "./Header.css";
 
 function Header() {
   return (
@@ -26,12 +26,17 @@ function Header() {
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
+          <div className="CartWidgetNone">
+          <CartWidget />
+          </div>
+          
           <Navbar.Toggle
             className="NavBarToggle py-0"
             aria-controls="basic-navbar-nav"
             variant="light"
             bg="light"
           />
+          
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">
             <Nav className="NavBar me-auto  mt-2">
               <Nav.Link className="hvr-underline-from-left" href="/#">
@@ -49,11 +54,14 @@ function Header() {
               <Nav.Link className="hvr-underline-from-left" href="/#/about-us">
                 Nosotros
               </Nav.Link>
-            </Nav>
-            <hr className="HrHeader"></hr>
-            <Nav className="CartSocialFlex ">
+              <Nav.Link href="/#/about-us">
+                <div className="CartSocialFlex ">
+                  <div  className="CartSocialResp">
+                    <CartWidget />
+                  </div>
+                </div>
+              </Nav.Link>
               <SocialMedia />
-              <CartWidget amount={0} />
             </Nav>
           </Navbar.Collapse>
         </Container>

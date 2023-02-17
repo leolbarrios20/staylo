@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 
 import { GContext } from "../../context/CartContext";
-import { BsTrash } from "react-icons/bs";
+
+import { Card } from "react-bootstrap";
+import { FaTrash } from "react-icons/fa";
 
 import "./CartItem.css";
 
@@ -25,26 +27,36 @@ const CartItem = ({ item, quantity }) => {
     }
   };
 */
-  return (
-    <section className="CartItem">
-      <div className="CartSpecsContainer">
-        <div className="CartFlex">
-          <img className="CartImg" alt="" src={item.img}></img>
-          <div className="CartDetailFlex">
-            <h6>Producto: {item.title} </h6>
-            <h6>Precio p/u: ${item.price} </h6>
-            <h6>Precio total: ${item.price * quantity} </h6>
-            <h6> {item.description} </h6>
-            <div className="QuantityFlex">
-              <p>Cantidad: {quantity} </p>
-              <BsTrash size={25}
+  return ( 
+    <section className="row col-lg-4 col-md-6 col-sm-12 mx-auto">
+        <Card className="Card">
+          <Card.Title className="CardTitle">{item.title}</Card.Title>
+          <Card.Img className="Image" src={item.img} />
+          <Card.Body>
+            <div className="QuantityFlex"> 
+            <Card.Text className="CardPriceBefore">
+              Antes: {item.priceBefore}{" "}
+            </Card.Text>
+            <FaTrash
+                size={25}
                 className="RemoveItem"
                 onClick={() => removeItem(item.id)}
               />
             </div>
-          </div>
-        </div>
-      </div>
+            <Card.Text className="CardPrice">
+              ${item.price.toFixed(2)}{" "}
+            </Card.Text>
+            <h6> {item.description} </h6>
+            <Card.Text className="CardDesc"> </Card.Text>
+            <div className="QuantityFlex">
+              <h6>Cantidad: {quantity} </h6>
+              <h6>Total: ${item.price * quantity} </h6>
+            </div>
+
+            
+
+          </Card.Body>
+        </Card>
     </section>
   );
 };

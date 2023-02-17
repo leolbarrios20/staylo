@@ -22,9 +22,11 @@ import Shipping from "./components/main/Shipping";
 import Services from "./components/main/Services";
 import AboutUs from "./components/main/AboutUs";
 import Footer from "./components/footer/Footer";
+import BuyForm from "./components/form/Form";
 
 //Core
 import reportWebVitals from "./reportWebVitals";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -54,6 +56,7 @@ root.render(
             path="/products/:categoryId"
             element={<ItemListContainer />}
           />
+          <Route exact path="/send-order" element= {<BuyForm/>} />
 
         </Routes>
         <Footer />

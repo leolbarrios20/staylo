@@ -12,6 +12,8 @@ import { Spinner } from "react-bootstrap";
 
 import { IoShirtOutline } from "react-icons/io5";
 import { IoShirtSharp } from "react-icons/io5";
+import { BsArrowRight } from "react-icons/bs";
+
 import { GiHoodie } from "react-icons/gi";
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -24,29 +26,28 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
 
-
   useEffect(() => {
     const getData = async () => {
-        const queryRef = categoryId
-            ? query(
-                collection(db, "productsList"),
-                where("category", "==", categoryId)
-            )
-            : collection(db, "productsList");
+      const queryRef = categoryId
+        ? query(
+            collection(db, "productsList"),
+            where("category", "==", categoryId)
+          )
+        : collection(db, "productsList");
 
-        // hacer la consulta
-        const response = await getDocs(queryRef);
-        const docsInfo = response.docs.map((doc) => {
-            const newDoc = {
-                id: doc.id,
-                ...doc.data(),
-            };
-            return newDoc;
-        });
-        setProducts(docsInfo);
+      // hacer la consulta
+      const response = await getDocs(queryRef);
+      const docsInfo = response.docs.map((doc) => {
+        const newDoc = {
+          id: doc.id,
+          ...doc.data(),
+        };
+        return newDoc;
+      });
+      setProducts(docsInfo);
     };
     getData();
-}, [categoryId]);
+  }, [categoryId]);
 
   const [loading, setLoading] = useState(false);
 
@@ -66,6 +67,11 @@ const ItemListContainer = () => {
       ) : (
         <div>
           <nav className="NavFilter container mx-auto">
+            <div className="FilterFlex">
+              <h6>FILTRAR </h6>
+              <BsArrowRight size={25} />
+            </div>
+
             <OverlayTrigger overlay={<Tooltip>Remeras Sublimadas</Tooltip>}>
               <span className="d-inline-block">
                 <Link to="/products/Sublimated">
