@@ -9,7 +9,6 @@ import Maestro from "../assets/img/maestro.png";
 import PagoFacil from "../assets/img/pagofacil.png";
 import RapiPago from "../assets/img/rapipago.png";
 
-import ScrollToTop from "react-scroll-to-top";
 import Select from "react-select";
 import { GContext } from "../../context/CartContext";
 
@@ -27,6 +26,11 @@ import Form from "react-bootstrap/Form";
 import { Spinner } from "react-bootstrap";
 
 const ItemDetail = ({ item }) => {
+
+  function ScrollToTop(){
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
 
   const { addItem } = useContext(GContext);
 
@@ -83,6 +87,7 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div>
+      {ScrollToTop()}
       {loading ? (
         <div className="SpinnerContainer">
           <Spinner />

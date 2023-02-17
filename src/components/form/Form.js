@@ -23,6 +23,10 @@ const BuyForm = () => {
     setPaymenthMethod(value);
   };
 
+  function ScrollToTop(){
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
+
   const paymenths = [
     { label: "Mercado Pago", value: "Mercado Pago" },
     { label: "Tarjeta de débito", value: "Tarjeta de débito" },
@@ -48,6 +52,7 @@ const BuyForm = () => {
 
   return (
     <Formik
+    
       initialValues={{
         name: "",
         phone: "",
@@ -165,6 +170,7 @@ const BuyForm = () => {
     >
       {({ errors }) => (
         <Form className="Form container-fluid">
+          {ScrollToTop()}
           <div>
             {!formSend ? (
               <div>
@@ -345,7 +351,7 @@ const BuyForm = () => {
                         <div>
                           <p ></p>
                           <Select
-                            className="Select"
+                            className="SelectForm"
                             defaultValue={{
                               label: "Seleccioná un metodo de pago",
                               value: "Tarjeta de débito",

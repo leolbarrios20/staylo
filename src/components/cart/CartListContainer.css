@@ -55,14 +55,14 @@
     padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
 }
 
 
 
 .GoToPay{
     border-radius: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -103,14 +103,36 @@
 .ButtonFlex{
     display: flex;
     justify-content: space-between;
-    gap: 100px;
 }
 
 
 .PayEnd{
     text-decoration: none;
+    background-color: black;
     color: white;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: 0.5s;
+    margin-bottom: 20px;
 }
+
+.PayEnd:hover{
+
+    color: white;
+    background-color: rgb(31, 31, 31);
+
+}
+
+.PayEnd p{
+    transform: translate(0, 6px);
+    font-weight: 600;
+}
+
+
 
 .CartPaymenthMethods img{
     max-width: 60px;

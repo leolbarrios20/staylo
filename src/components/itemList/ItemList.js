@@ -1,9 +1,11 @@
 import Item from "../item/Item";
-import ScrollToTop from "react-scroll-to-top";
 
 import "./ItemList.css";
 
 const ItemList = (props) => {
+  function ScrollToTop(){
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
   function CoolPage() {
     return (
       <div>
@@ -13,10 +15,12 @@ const ItemList = (props) => {
   }
   return (
     <section className="container row mx-auto ItemContainer">
+      {ScrollToTop()}
       {props.products.map((product) => (
         <Item key={product.id} data={product} />
       ))}
       {CoolPage()}
+      
     </section>
   );
 };

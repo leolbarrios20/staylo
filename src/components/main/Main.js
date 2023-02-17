@@ -9,7 +9,9 @@ import "./Main.css";
 
 const Main = () => {
 
-
+  function ScrollToTop(){
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }
 
   const [loading, setLoading] = useState(false);
 
@@ -22,6 +24,7 @@ const Main = () => {
 
   return (
     <main className="Main">
+      {ScrollToTop()}
       {loading ? (
         <div className=" SpinnerMain">
           <Spinner />
