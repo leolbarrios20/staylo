@@ -87,15 +87,16 @@ const BuyForm = () => {
         if (!values.email) {
           errors.email = "Por favor, ingresa un email.";
         } else if (
+          //eslint-disable-next-line 
           !/^(([^<>()[\].,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(
             values.email
           )
         ) {
           errors.email = "El email no es válido.";
         }
-
+  
         // ERROR PROVINCIA
-        if (!values.province) {
+        if (!values.province) { 
           errors.province = "Por favor, ingresa una provincia.";
         } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(values.province)) {
           errors.province = "Solo deben ingresarse letras o espacios.";

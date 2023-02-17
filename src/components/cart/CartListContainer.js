@@ -27,8 +27,6 @@ const CartListContainer = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const [orderId, setOrderId] = useState(undefined);
-
   const deliveryPrice = 1300;
   /*
   const sendOrder = async(event) =>{
