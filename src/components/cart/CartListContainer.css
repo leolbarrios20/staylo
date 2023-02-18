@@ -1,8 +1,22 @@
+@import url("http://allfont.net/allfont.css?fonts=agency-fb-bold");
+
+
 .EmptyCart {
   text-align: center;
-  height: 70vmin;
-  transform: translate(0px, 100px);
+  font-family: 'Agency FB Bold', arial;
+
 }
+
+
+.EmptyCartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-top: 80px;
+  height: 50vmin;
+
+}
+
 
 .EmptyCartP {
   margin-top: 50px;
@@ -128,4 +142,22 @@
 .CartPaymenthMethods img {
   max-width: 65px;
   margin: 5px;
+}
+
+.FlexIconsCartContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Agency FB Bold', arial;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+}
+
+
+.FlexIconsCart{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
 }

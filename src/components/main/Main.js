@@ -7,6 +7,7 @@ import { Spinner } from "react-bootstrap";
 import "./Main.css";
 
 const Main = () => {
+
   function ScrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
@@ -20,6 +21,7 @@ const Main = () => {
     }, 1500);
   }, []);
 
+  
   return (
     <main className="Main">
       {ScrollToTop()}
@@ -28,7 +30,9 @@ const Main = () => {
           <Spinner />
         </div>
       ) : (
+        
         <Background brand="Staylo" specs="Remeras Personalizadas" />
+        
       )}
     </main>
   );

@@ -8,6 +8,8 @@ import { Button } from "react-bootstrap";
 import { Spinner } from "react-bootstrap";
 import { BsArrowRight } from "react-icons/bs";
 import { FaTruck } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 
 import Cabal from "../assets/img/cabal.png";
 import MasterCard from "../assets/img/mastercard.png";
@@ -28,22 +30,6 @@ const CartListContainer = () => {
   const [loading, setLoading] = useState(false);
 
   const deliveryPrice = 1300;
-  /*
-  const sendOrder = async(event) =>{
-    const newOrder = {
-      buyer:{
-        name: "Leo",
-        phone: 3512525252,
-        email: "leo@gmail.com"
-      },
-      items: itemsCarrito,
-      total: 250000,
-    };
-    const queryRef = collection(db, "orders")
-    const response =  await addDoc(queryRef, newOrder);
-    setOrderId(response.id);
-  }
-*/
 
   useEffect(() => {
     setLoading(true);
@@ -103,10 +89,8 @@ const CartListContainer = () => {
                   <div className="CartItemRight col-lg-7 col-md-12 col-sm-12 mx-auto">
                     <Link to="/send-order" className="PayEnd">
                       <p>FINALIZAR COMPRA</p>
-
                       <BsArrowRight size={25} />
                     </Link>
-
                     <div className="ButtonFlex">
                       <Link to="/products/">
                         <Button variant="success" className="GoToPay">
@@ -121,7 +105,6 @@ const CartListContainer = () => {
                         Vaciar Carrito
                       </Button>
                     </div>
-
                     <p className="Resume">Resumen del pedido</p>
                     <div className="ProductsPriceFlex">
                       <p> {totalProducts()} producto/s </p>
@@ -180,14 +163,35 @@ const CartListContainer = () => {
                 </section>
               </div>
             ) : (
-              <div className="EmptyCart">
-                <p className=" OffCanvasP EmptyCartP">
-                  El carrito de compras se encuentra vacio
-                </p>
-                <Link className="AddMoreProducts" to="/products">
-                  <Button variant="dark">Agregar Productos</Button>
-                </Link>
-              </div>
+              <section className="EmptyCartContainer">
+                <div className="EmptyCart">
+                  <p className=" OffCanvasP EmptyCartP">
+                    El carrito de compras se encuentra vacio
+                  </p>
+                  <Link className="AddMoreProducts" to="/products">
+                    <Button variant="dark">Agregar Productos</Button>
+                  </Link>
+                </div>
+                <div className="FlexIconsCartContainer">
+                  <p>Visita nuestras redes</p>
+                  <div className="FlexIconsCart">
+                    <a
+                      href="https://www.instagram.com/staylo_cba/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <BsInstagram color="black" size={25} />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/search/top?q=staylo_cba"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <BsFacebook color="black" size={25} />
+                    </a>
+                  </div>
+                </div>
+              </section>
             )}
           </div>
         </div>

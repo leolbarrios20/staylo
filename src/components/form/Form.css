@@ -74,3 +74,12 @@
 .PaymenthParagraph {
   text-align: center;
 }
+
+.ModalParagraph{
+  font-weight: 600;
+}
+
+.ModalParagraph span{
+  font-weight: 700;
+  font-style: italic;
+}

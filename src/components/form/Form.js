@@ -7,6 +7,9 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link } from "react-router-dom";
 import CartItem from "../cart/CartItem";
 import { Button } from "react-bootstrap";
+import Modal from "react-bootstrap/Modal";
+import { BsInstagram } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
 
 // Estilos
 import "./Form.css";
@@ -17,6 +20,42 @@ import "./Form.css";
 
 // Función constructora
 const BuyForm = () => {
+  function MyVerticallyCenteredModal(props) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            Felicitaciones!
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h5>Pedido realizado con éxito</h5>
+          <p className="ModalParagraph">
+            Comprador: <span>{orderData.buyer.name}</span>
+          </p>
+          <p className="ModalParagraph">
+            Su código de orden es: <span>{orderId}</span>
+          </p>
+          <p className="ModalParagraph">
+            Recibirás toda la información de pago en tu correo:{" "}
+            <span>{orderData.buyer.email}</span>
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Link to="/products" className="seguir_comprando">
+            Seguir Comprando
+          </Link>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+
   const [paymenthMethod, setPaymenthMethod] = useState();
 
   const handleSelectChange = ({ value }) => {
@@ -53,11 +92,13 @@ const BuyForm = () => {
     if (itemsCarrito.length === 0) {
       setTimeout(() => {
         setLength(false);
-      }, 5000);
+      }, 25000);
     } else {
       setLength(true);
     }
   }, [itemsCarrito]);
+
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <Formik
@@ -295,7 +336,7 @@ const BuyForm = () => {
                           name="street"
                           autoComplete="on"
                           className="Label"
-                          placeholder="Av. Colon"
+                          placeholder="Calle"
                         />
                         <ErrorMessage
                           name="street"
@@ -377,11 +418,7 @@ const BuyForm = () => {
                       </div>
                       {/* Datos de Facturación */}
                     </div>
-
-                    {/* DNI */}
-
                     <hr />
-
                     {/* RESUMEN DE COMPRA */}
                     <div>
                       <div className="container row mx-auto ItemContainer">
@@ -403,9 +440,14 @@ const BuyForm = () => {
 
                     {/* BOTON FINALIZAR COMPRA */}
                     <div className="ButtonFinalContainer">
-                      <Button className="ButtonFinal" type="sumbit">
+                      <Button
+                        className="ButtonFinal"
+                        type="sumbit"
+                        onClick={() => setModalShow(true)}
+                      >
                         Finalizar Compra
                       </Button>
+
                       {formSend && (
                         <div className="exito">
                           <div className="resumen_de_compra">
@@ -465,61 +507,13 @@ const BuyForm = () => {
                 </div>
               ) : (
                 <div>
-                  {formSend && (
-                    <div className="exito">
-                      <div className="resumen_de_compra">
-                        <h4>¡Compra Exitosa!</h4>
-                        <p className="number_order">
-                          {" "}
-                          <span>Su código de orden es:</span> {orderId}
-                        </p>
-                        <hr className="linea_separativa" />
-                        {/* datos del usuario */}
-                        <div className="datos_buyer">
-                          <p>
-                            Nombre: <span>{orderData.buyer.name}</span>
-                          </p>
-                          <p>
-                            Telefono: <span>{orderData.buyer.phone}</span>
-                          </p>
-                          <p>
-                            Email: <span>{orderData.buyer.email}</span>
-                          </p>
-                          <p>
-                            Provincia: <span>{orderData.buyer.province}</span>
-                          </p>
-                          <p>
-                            Localidad: <span>{orderData.buyer.location}</span>
-                          </p>
-                          <p>
-                            Calle: <span>{orderData.buyer.street}</span>
-                          </p>
-                          <p>
-                            Numero: <span>{orderData.buyer.numberStreet}</span>
-                          </p>
-                          <p>
-                            Codigo Postal:{" "}
-                            <span>{orderData.buyer.postalCode}</span>
-                          </p>
-                        </div>
-                        <hr className="linea_separativa" />
-                        <div className="datos_buyer">
-                          <p>
-                            Total: <span>${orderData.total}</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div className="seguir_comprando_contenedor">
-                        <Link to="/products" className="seguir_comprando">
-                          Seguir Comprando
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          ) : (
+                    <>
+                      <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                      />
+                    </>
+                    <section className="EmptyCartContainer">
             <div className="EmptyCart">
               <p className=" OffCanvasP EmptyCartP">
                 El carrito de compras se encuentra vacio
@@ -528,6 +522,60 @@ const BuyForm = () => {
                 <Button variant="dark">Agregar Productos</Button>
               </Link>
             </div>
+            <div className="FlexIconsCartContainer">
+              <p>Visita nuestras redes</p>
+              <div className="FlexIconsCart">
+                <a
+                  href="https://www.instagram.com/staylo_cba/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsInstagram color="black" size={25} />
+                </a>
+                <a
+                  href="https://www.facebook.com/search/top?q=staylo_cba"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsFacebook color="black" size={25} />
+                </a>
+              </div>
+            </div>
+          </section>
+                    
+                </div>
+              )}
+            </div>
+          ) : (
+            <section className="EmptyCartContainer">
+            <div className="EmptyCart">
+              <p className=" OffCanvasP EmptyCartP">
+                El carrito de compras se encuentra vacio
+              </p>
+              <Link className="AddMoreProducts" to="/products">
+                <Button variant="dark">Agregar Productos</Button>
+              </Link>
+            </div>
+            <div className="FlexIconsCartContainer">
+              <p>Visita nuestras redes</p>
+              <div className="FlexIconsCart">
+                <a
+                  href="https://www.instagram.com/staylo_cba/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsInstagram color="black" size={25} />
+                </a>
+                <a
+                  href="https://www.facebook.com/search/top?q=staylo_cba"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsFacebook color="black" size={25} />
+                </a>
+              </div>
+            </div>
+          </section>
           )}
         </Form>
       )}

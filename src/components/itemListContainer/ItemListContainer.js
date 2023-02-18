@@ -3,7 +3,7 @@ import ItemList from "../itemList/ItemList";
 import { useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
-
+import ScrollToTop from "react-scroll-to-top";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase";
 
@@ -51,6 +51,16 @@ const ItemListContainer = () => {
 
   const [loading, setLoading] = useState(false);
 
+  
+
+  function CoolPage() {
+    return (
+      <div>
+        <ScrollToTop  smooth />
+      </div>
+    );
+  }
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -60,6 +70,7 @@ const ItemListContainer = () => {
 
   return (
     <section>
+       {CoolPage()}
       {loading ? (
         <div className="SpinnerContainer">
           <Spinner />
