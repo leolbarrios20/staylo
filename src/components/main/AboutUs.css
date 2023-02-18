@@ -1,10 +1,9 @@
-.AboutUsContainer{
-    text-align: center;
-    height: 80vmin;
-    
+.AboutUsContainer {
+  text-align: center;
+  height: 80vmin;
 }
 
-.AboutUsContainer h3{
-    font-size: 50px;
-    padding-top: 300px;
+.AboutUsContainer h3 {
+  font-size: 50px;
+  padding-top: 300px;
 }

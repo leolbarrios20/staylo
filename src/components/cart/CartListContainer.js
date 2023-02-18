@@ -21,11 +21,6 @@ import RapiPago from "../assets/img/rapipago.png";
 import "./CartListContainer.css";
 
 const CartListContainer = () => {
-  
-  function ScrollToTop(){
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  }
-  
   const { itemsCarrito, getTotal, clear, totalProducts } = useContext(GContext);
 
   const [delivery, setDelivery] = useState(false);
@@ -67,7 +62,6 @@ const CartListContainer = () => {
 
   return (
     <section className="CartListContainer">
-      {ScrollToTop()}
       {loading ? (
         <div className="SpinnerContainer">
           <Spinner />
@@ -106,15 +100,13 @@ const CartListContainer = () => {
                   </div>
                 </section>
                 <section className="container-fluid mx-auto row">
-                  <div className="CartItemRight col-lg- col-md-12 col-sm-12 mx-auto">
-       
-                      <Link to="/send-order" className="PayEnd">
-                        <p>FINALIZAR COMPRA</p>
+                  <div className="CartItemRight col-lg-7 col-md-12 col-sm-12 mx-auto">
+                    <Link to="/send-order" className="PayEnd">
+                      <p>FINALIZAR COMPRA</p>
 
-                        <BsArrowRight size={25} />
-                      </Link>
-                      
-         
+                      <BsArrowRight size={25} />
+                    </Link>
+
                     <div className="ButtonFlex">
                       <Link to="/products/">
                         <Button variant="success" className="GoToPay">
@@ -173,6 +165,7 @@ const CartListContainer = () => {
                       </div>
                     )}
                     <div className="CartPaymenthMethods">
+                      <hr></hr>
                       <h6>Opciones de pago</h6>
                       <img alt="" src={Visa}></img>
                       <img alt="" src={Naranja}></img>

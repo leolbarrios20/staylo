@@ -2,7 +2,7 @@ import "./ItemDetailContainer.css";
 
 import ItemDetail from "../itemDetail/ItemDetail";
 import { Link } from "react-router-dom";
-import { doc, getDoc } from "firebase/firestore"
+import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../services/firebase";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -12,28 +12,26 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
-
   const [product, setProduct] = useState({});
   const { productId } = useParams();
 
-  useEffect(()=>{
-    const getProduct = async()=>{
-        const queryRef = doc(db,"productsList",productId);
-        const response = await getDoc(queryRef);
-        const newDoc = {
-            id:response.id,
-            ...response.data()
-        }
-        setProduct(newDoc);
-
-    }
+  useEffect(() => {
+    const getProduct = async () => {
+      const queryRef = doc(db, "productsList", productId);
+      const response = await getDoc(queryRef);
+      const newDoc = {
+        id: response.id,
+        ...response.data(),
+      };
+      setProduct(newDoc);
+    };
     getProduct();
-},[productId])
+  }, [productId]);
 
   return (
-    <section >
+    <section>
       <Link to="/products" className="Back">
-        <BsFillArrowLeftCircleFill color="black" size={30}/>
+        <BsFillArrowLeftCircleFill color="black" size={30} />
       </Link>
       <div className="container col-12">
         <ItemDetail item={product} />

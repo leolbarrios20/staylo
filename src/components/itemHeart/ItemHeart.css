@@ -1,7 +1,4 @@
-.ItemHeart{
-    cursor: pointer;
-    transform: translate(0, -15%);
+.ItemHeart {
+  cursor: pointer;
+  transform: translate(0, -15%);
 }
-
-
-  

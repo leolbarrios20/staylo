@@ -1,47 +1,47 @@
-.CountContainer .BoxCount{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(243, 243, 243);
-    color: rgb(0, 0, 0);
-    margin: 30px 0;
-    border-radius: 5px;
-    max-height: 30px;
-    border: black solid 1px;
-  }
-  
-  .CountContainer .BoxCount span{
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  .CountContainer .BoxCount button{
-    width: 150px;
-    font-size: 30px;
-    background-color: transparent;
-    border: none;
-    color: rgb(0, 0, 0);
-  }
-  
-  .CountContainer{
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  .CountContainer .OnAdd{
-    padding: 5px 15px;
-    font-weight: 600;
-    width: 100%;
-  }
+.CountContainer .BoxCount {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  color: rgb(0, 0, 0);
+  margin: 30px 0;
+  border-radius: 5px;
+  max-height: 30px;
+  border: black solid 1px;
+}
 
-  .ModalTitle{
-    font-size: 18px;
-  }
+.CountContainer .BoxCount span {
+  font-size: 18px;
+  font-weight: 600;
+}
 
-  .ModalBody p{
-    font-weight: 600;
-  }
+.CountContainer .BoxCount button {
+  width: 150px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: rgb(0, 0, 0);
+}
 
-  .ModalBody p span{
-    font-weight: 700;
-  }
+.CountContainer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.CountContainer .OnAdd {
+  padding: 5px 15px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.ModalTitle {
+  font-size: 18px;
+}
+
+.ModalBody p {
+  font-weight: 600;
+}
+
+.ModalBody p span {
+  font-weight: 700;
+}

@@ -1,6 +1,5 @@
-
 import { initializeApp } from "firebase/app";
-import {getFirestore}  from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -9,7 +8,7 @@ const firebaseConfig = {
   projectId: "staylo-6c46b",
   storageBucket: "staylo-6c46b.appspot.com",
   messagingSenderId: "182157052472",
-  appId: "1:182157052472:web:6550f77623d56cc766f4cd"
+  appId: "1:182157052472:web:6550f77623d56cc766f4cd",
 };
 
 // Initialize Firebase

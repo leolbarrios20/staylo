@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import Select from "react-select";
 
@@ -23,7 +23,10 @@ const Paymenths = () => {
       <p className="SizeParagraph"> Talle: {paymenthMethod} </p>
       <Select
         className="Select"
-        defaultValue={{ label: "Tarjeta de débito", value: "Tarjeta de débito" }}
+        defaultValue={{
+          label: "Tarjeta de débito",
+          value: "Tarjeta de débito",
+        }}
         options={paymenths}
         onChange={handleSelectChange}
       />

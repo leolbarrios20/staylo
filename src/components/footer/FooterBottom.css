@@ -1,11 +1,10 @@
-.FooterBottom p{
-    color: white;
-    text-align: center;
-    font-family: 'agency_fb', sans-serif;
+.FooterBottom p {
+  color: white;
+  text-align: center;
+  font-family: "agency_fb", sans-serif;
 }
 
-.FooterBottom{
-    background-color: black;
-    padding: 10px;
+.FooterBottom {
+  background-color: black;
+  padding: 10px;
 }
-

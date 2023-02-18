@@ -1,32 +1,76 @@
-.CartItemForm{
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-
+.CartItemForm {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
-.PaymenthMethodFlex{
-    display: flex;
-    gap: 10px;
+.PaymenthMethodFlex {
+  display: flex;
+  gap: 10px;
 }
 
-.SelectForm{
-    max-width: 400px;
+.SelectForm {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.FinalBuy{
-    text-align: center;
-    margin: 20px;
+.FinalBuy {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(27, 27, 27);
+  color: white;
 }
 
-.BuyerDataParagraph{
-    font-weight: 600;
+.BuyerDataParagraph {
+  font-weight: 600;
+  text-align: left;
+  margin: 30px 5px;
 }
 
-.DataReq{
-    font-weight: 700;
-    margin: 20px;
-    width: 180px;
+.DataReq {
+  font-weight: 700;
+  margin: 5px;
+}
+
+.FormFlex {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.Label {
+  border-radius: 5px;
+  border: 1px black solid;
+  padding: 5px;
+}
+
+.Error {
+  color: red;
+}
+
+.FinalAmount {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ButtonFinal {
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  max-width: 900px;
+}
+
+.ButtonFinalContainer {
+  margin: 20px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+.PaymenthParagraph {
+  text-align: center;
 }

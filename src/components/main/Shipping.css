@@ -1,9 +1,7 @@
-.ShippingContainer{
-    text-align: center;
-    height: 80vmin;
+.ShipmentFlexImg {
+  display: flex;
 }
 
-.ShippingContainer h3{
-    font-size: 50px;
-    padding-top: 300px;
+.ShipmentFlexImg img {
+  max-width: 80px;
 }

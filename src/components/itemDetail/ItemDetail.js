@@ -26,11 +26,9 @@ import Form from "react-bootstrap/Form";
 import { Spinner } from "react-bootstrap";
 
 const ItemDetail = ({ item }) => {
-
-  function ScrollToTop(){
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  function ScrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
-
 
   const { addItem } = useContext(GContext);
 
@@ -56,8 +54,6 @@ const ItemDetail = ({ item }) => {
   //useState para loader.
   const [loading, setLoading] = useState(false);
 
-
-
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -67,7 +63,7 @@ const ItemDetail = ({ item }) => {
 
   //////////////////////////////////////////////////////
 
-    //////////////////////////////////////////////////////
+  //////////////////////////////////////////////////////
   //useState para form en talle.
 
   const [selectedSizes, setSelectedSizes] = useState();
@@ -208,11 +204,15 @@ const ItemDetail = ({ item }) => {
               <div className="FormContainer">
                 <div>
                   <p className="SizeParagraph"> Talle: {selectedSizes} </p>
-                  <Select 
-                  className="Select"
-                  defaultValue={{ label: "Seleccioná un talle", value: "Seleccion" }}
-                  options={sizes} 
-                  onChange={handleSelectChange} />
+                  <Select
+                    className="Select"
+                    defaultValue={{
+                      label: "Seleccioná un talle",
+                      value: "Seleccion",
+                    }}
+                    options={sizes}
+                    onChange={handleSelectChange}
+                  />
                 </div>
               </div>
 

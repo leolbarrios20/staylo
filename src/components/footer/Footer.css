@@ -1,97 +1,86 @@
-
-
-.Footer{
-    background-color: #212429;
-    padding: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    font-family: 'agency_fb', sans-serif;
+.Footer {
+  background-color: #212429;
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  font-family: "agency_fb", sans-serif;
 }
 
 @media (max-width: 990px) {
-    .Footer{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 30px;
-    }
-}
-
-.Footer p{
-    color: white;
-}
-
- .ContactFlex{
-    display: flex;
-    justify-content: flex;
-    align-items: baseline;
-    gap: 6px;
-}
-
-.ContactFlex p{
-    margin: 0;
-
-}
-
-
-.FooterRight{
+  .Footer {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 30px;
+  }
 }
 
-
-
-.FooterTitles{
-    font-size: 21px;
-    padding: 20px 0 10px 0;
-    margin: 0;
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 1px;
+.Footer p {
+  color: white;
 }
 
-
-
-.PaymentsMethods{
-    display: flex;
-    flex-direction: column;
+.ContactFlex {
+  display: flex;
+  justify-content: flex;
+  align-items: baseline;
+  gap: 6px;
 }
 
-
-
-.PaymentsMethodsImg{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    max-width: 300px;
-    gap: 1%;
+.ContactFlex p {
+  margin: 0;
 }
 
-.PaymentsMethodsImg img{
-    max-width: 50px;
-    margin: 2px;
+.FooterRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.ShipmentMethodsImg{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    max-width: 250px;
-    gap: 1%;
+.FooterTitles {
+  font-size: 21px;
+  padding: 20px 0 10px 0;
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
-.ShipmentMethodsImg img{
-    max-width: 50px;
-    margin: 2px;
+.PaymentsMethods {
+  display: flex;
+  flex-direction: column;
 }
 
+.PaymentsMethodsImg {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 300px;
+  gap: 1%;
+}
 
-.FlexIcons{
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    margin-bottom: 10px;
+.PaymentsMethodsImg img {
+  max-width: 50px;
+  margin: 2px;
+}
+
+.ShipmentMethodsImg {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 250px;
+  gap: 1%;
+}
+
+.ShipmentMethodsImg img {
+  max-width: 50px;
+  margin: 2px;
+}
+
+.FlexIcons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 }

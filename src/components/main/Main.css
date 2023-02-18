@@ -1,17 +1,17 @@
-.SpinnerContainer{
-    height: 75vh;
-    display: grid;
-    place-content: center;
+.SpinnerContainer {
+  height: 75vh;
+  display: grid;
+  place-content: center;
 }
 
 @media (max-width: 990px) {
-    .SpinnerContainer {
-      transform: translate(0, -50px);
-    }
+  .SpinnerContainer {
+    transform: translate(0, -50px);
   }
+}
 
-  .SpinnerMain{
-    height: 80vh;
-    display: grid;
-    place-content: center;
-  }
+.SpinnerMain {
+  height: 80vh;
+  display: grid;
+  place-content: center;
+}

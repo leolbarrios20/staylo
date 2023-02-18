@@ -20,7 +20,7 @@ const Services = () => {
     <section>
       {loading ? (
         <div className="SpinnerContainer">
-          <Spinner/>
+          <Spinner />
         </div>
       ) : (
         <div className="ServicesContainer container">

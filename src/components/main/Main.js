@@ -4,13 +4,11 @@ import { useState, useEffect } from "react";
 
 import { Spinner } from "react-bootstrap";
 
-
 import "./Main.css";
 
 const Main = () => {
-
-  function ScrollToTop(){
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  function ScrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
 
   const [loading, setLoading] = useState(false);

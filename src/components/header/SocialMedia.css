@@ -1,21 +1,16 @@
-.SocialMedia{
-    display: flex;
-    align-items: center;
-
-
+.SocialMedia {
+  display: flex;
+  align-items: center;
 }
 
 .SocialMedia a {
-    margin: 5px;
-  }
-  
-  @media (max-width: 990px) {
-    .SocialMedia{
-      display: flex;
-      justify-content: space-between;
-      gap: 50px;
+  margin: 5px;
+}
 
-
-      
-    }
+@media (max-width: 990px) {
+  .SocialMedia {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
   }
+}

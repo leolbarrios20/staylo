@@ -1,45 +1,34 @@
+.LogoSpecsContainer {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: "Colonna MT";
+}
 
-.LogoSpecsContainer{
-    display: flex;
-    align-items: baseline;
-    cursor: pointer;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: 'Colonna MT';
-  }
+.LogoSpecsContainer:hover {
+  color: rgb(230, 230, 230);
+}
 
-  .LogoSpecsContainer:hover{
-    color: rgb(230, 230, 230);
-  }
+.LogoSpecsContainer span {
+  font-weight: 400;
+  font-size: 60px;
+  font-family: "Colonna MT";
+}
 
-
-
-  
+@media (max-width: 990px) {
   .LogoSpecsContainer span {
-    font-weight: 400;
-    font-size: 60px;
-    font-family: 'Colonna MT';
+    font-size: 50px;
   }
 
-  @media (max-width: 990px) {
-    .LogoSpecsContainer span {
-      font-size: 50px;
-    }
-
-    .BrandContainer{
-      transform: translate(0, 4px);
-    }
-    
-  
-
-    
+  .BrandContainer {
+    transform: translate(0, 4px);
   }
-  
-  .LogoSpecsContainer p {
-    font-weight: 400;
-    font-size: 32px;
-    font-family: 'Colonna MT';
-  }
+}
 
-
-  
+.LogoSpecsContainer p {
+  font-weight: 400;
+  font-size: 32px;
+  font-family: "Colonna MT";
+}

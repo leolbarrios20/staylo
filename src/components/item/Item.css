@@ -1,13 +1,10 @@
-
-
-
-.PriceHeart{
+.PriceHeart {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
 
-.ButtonAddSub{
+.ButtonAddSub {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,16 +14,15 @@
   border-radius: 25px;
 }
 
-.ButtonAddSub span{
+.ButtonAddSub span {
   color: rgb(0, 0, 0);
 }
 
-.ButtonAddSub button{
+.ButtonAddSub button {
   background-color: transparent;
   font-size: 30px;
   border: none;
   color: rgb(0, 0, 0);
-
 }
 
 .TalleContainer {
@@ -45,13 +41,13 @@
   border-radius: 5px;
   background-color: rgb(250, 250, 250);
   color: rgb(0, 0, 0);
-  font-family: 'Agency FB';
+  font-family: "Agency FB";
 }
 
 .TalleContainer p {
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Agency FB';
+  font-family: "Agency FB";
 }
 
 .CardTitle {
@@ -67,7 +63,6 @@
   font-weight: 700;
   font-size: 20px;
   text-align: left;
-
 }
 
 .CardPriceTotal {
@@ -75,7 +70,6 @@
   font-size: 20px;
   text-align: left;
   margin-top: 10px;
-
 }
 
 .CardPriceBefore {
@@ -90,7 +84,6 @@
   font-size: 20px;
 
   text-align: center;
-  
 }
 
 .CardAvailable {
@@ -101,7 +94,7 @@
   cursor: pointer;
 }
 
-div .Card .Link{
+div .Card .Link {
   text-align: center;
   text-decoration: none;
   display: grid;
@@ -109,8 +102,6 @@ div .Card .Link{
   font-weight: 500;
 }
 
-
-div .Card .Link:hover{
+div .Card .Link:hover {
   color: rgb(255, 0, 51);
 }
-

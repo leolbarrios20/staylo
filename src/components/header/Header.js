@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Brand from "./Brand";
 import CartWidget from "./CartWidget";
 import SocialMedia from "./SocialMedia";
-
+import { Link } from "react-router-dom";
 import React from "react";
 
 import "./NavBar.css";
@@ -26,17 +26,15 @@ function Header() {
           <Navbar.Brand className="py-0">
             <Brand />
           </Navbar.Brand>
-          <div className="CartWidgetNone">
-          <CartWidget />
-          </div>
-          
+          <Link to="/cart" className="CartWidgetNone">
+            <CartWidget />
+          </Link>
           <Navbar.Toggle
             className="NavBarToggle py-0"
             aria-controls="basic-navbar-nav"
             variant="light"
             bg="light"
           />
-          
           <Navbar.Collapse id="basic-navbar-nav" className="NavBarCollapse">
             <Nav className="NavBar me-auto  mt-2">
               <Nav.Link className="hvr-underline-from-left" href="/#">
@@ -54,9 +52,9 @@ function Header() {
               <Nav.Link className="hvr-underline-from-left" href="/#/about-us">
                 Nosotros
               </Nav.Link>
-              <Nav.Link href="/#/about-us">
+              <Nav.Link href="/#/cart">
                 <div className="CartSocialFlex ">
-                  <div  className="CartSocialResp">
+                  <div className="CartSocialResp">
                     <CartWidget />
                   </div>
                 </div>

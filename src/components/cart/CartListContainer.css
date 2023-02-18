@@ -1,140 +1,131 @@
-.EmptyCart{
-    text-align: center;
-    height: 70vmin;
-    transform: translate(0px, 100px);
+.EmptyCart {
+  text-align: center;
+  height: 70vmin;
+  transform: translate(0px, 100px);
 }
 
-.EmptyCartP{
-    margin-top: 50px;
-    font-size: 18px;
+.EmptyCartP {
+  margin-top: 50px;
+  font-size: 18px;
 }
 
-
-
-.CartItem{
-    margin-bottom: 100px;
+.CartItem {
+  margin-bottom: 100px;
 }
 
 @media (max-width: 1150px) {
-    .Cart {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items:normal;
-      align-content: center;
-      gap: 5%;
-    }
-  }
-
-.CartItemLeft{
-
-    text-align: left;
-}
-
-.CartTitle{
-    font-weight: 700;
-    font-size: 37px;
-    margin: 40px 0;
-}
-
-.getTotal{
-    font-style: italic;
-}
-.TotalCartDetail{
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.TotalCartDetailP{
-    font-size: 18px;
-    font-weight: 600;
-
-}
-
-.CartItemRight{
-    padding: 25px;
+  .Cart {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-
-
-.GoToPay{
-    border-radius: 0;
-    margin-bottom: 10px;
-    display: flex;
     justify-content: center;
-    gap: 20px;
-    font-weight: 600;
-}
-
-.ProductsPriceFlex{
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-.ProductsPriceFlex p{
-    font-weight: 500;
-    font-size: 19px;
-}
-
-.DeliveryFlex{
-    display: flex;
-    justify-content: space-between;
-}
-
-.DeliveryFlex .Delivery{
-    font-weight: 500;
-    font-size: 19px;
-}
-
-.DeliveryFlex .FreeOrPrice{
-    font-weight: 500;
-    font-size: 19px;
-}
-
-.Resume{
-    font-weight: 700;
-    font-size: 22px;
-}
-
-.ButtonFlex{
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.PayEnd{
-    text-decoration: none;
-    background-color: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    align-items: normal;
     align-content: center;
-    transition: 0.5s;
-    margin-bottom: 20px;
+    gap: 5%;
+  }
 }
 
-.PayEnd:hover{
-
-    color: white;
-    background-color: rgb(31, 31, 31);
-
+.CartTitle {
+  font-weight: 600;
+  font-size: 35px;
+  margin: 40px 0;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 2px;
 }
 
-.PayEnd p{
-    transform: translate(0, 6px);
-    font-weight: 600;
+.getTotal {
+  font-style: italic;
+}
+.TotalCartDetail {
+  font-size: 19px;
+  font-weight: 600;
 }
 
+.TotalCartDetailP {
+  font-size: 15px;
+  font-weight: 600;
+}
 
+.CartItemRight {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-.CartPaymenthMethods img{
-    max-width: 60px;
-    margin-right: 10px;
+.GoToPay {
+  border-radius: 0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.ProductsPriceFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductsPriceFlex p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.DeliveryFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DeliveryFlex .Delivery {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.DeliveryFlex .FreeOrPrice {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.Resume {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.ButtonFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.PayEnd {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.PayEnd:hover {
+  color: white;
+  background-color: rgb(31, 31, 31);
+}
+
+.PayEnd p {
+  transform: translate(0, 6px);
+  font-weight: 600;
+}
+
+.CartPaymenthMethods img {
+  max-width: 65px;
+  margin: 5px;
 }

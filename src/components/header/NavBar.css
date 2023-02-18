@@ -1,4 +1,4 @@
-.NavBarToggle{
+.NavBarToggle {
   border: none;
 }
 
@@ -36,7 +36,6 @@
   justify-content: flex-start;
   flex-direction: row;
   margin-left: 300px;
-
 }
 
 @media (max-width: 1230px) {
@@ -61,7 +60,7 @@
   }
 }
 
-.CartSocialResp{
+.CartSocialResp {
   margin-right: 100px;
 }
 
@@ -77,18 +76,23 @@
   }
 }
 
-.NavBar{
+.NavBar {
   display: flex;
   align-items: center;
   align-content: center;
 }
 .CartWidgetNone {
   display: none;
+  text-decoration: none;
 }
 
 @media (max-width: 990px) {
   .CartWidgetNone {
     display: block;
-    margin-left: -100px;
+    margin-left: -90px;
   }
+}
+
+.NavBarCollapse a {
+  text-decoration: none;
 }

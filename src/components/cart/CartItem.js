@@ -10,8 +10,8 @@ import "./CartItem.css";
 const CartItem = ({ item, quantity }) => {
   const { removeItem } = useContext(GContext);
 
-  function ScrollToTop(){
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  function ScrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
 
   /*
@@ -31,37 +31,32 @@ const CartItem = ({ item, quantity }) => {
     }
   };
 */
-  return ( 
+  return (
     <section className="row col-lg-4 col-md-6 col-sm-12 mx-auto">
       {ScrollToTop()}
-        <Card className="Card">
-          <Card.Title className="CardTitle">{item.title}</Card.Title>
-          <Card.Img className="Image" src={item.img} />
-          <Card.Body>
-            <div className="QuantityFlex"> 
+      <Card className="Card">
+        <Card.Title className="CardTitle">{item.title}</Card.Title>
+        <Card.Img className="Image" src={item.img} />
+        <Card.Body>
+          <div className="QuantityFlex">
             <Card.Text className="CardPriceBefore">
               Antes: {item.priceBefore}{" "}
             </Card.Text>
             <FaTrash
-                size={25}
-                className="RemoveItem"
-                onClick={() => removeItem(item.id)}
-              />
-            </div>
-            <Card.Text className="CardPrice">
-              ${item.price.toFixed(2)}{" "}
-            </Card.Text>
-            <h6> {item.description} </h6>
-            <Card.Text className="CardDesc"> </Card.Text>
-            <div className="QuantityFlex">
-              <h6>Cantidad: {quantity} </h6>
-              <h6>Total: ${item.price * quantity} </h6>
-            </div>
-
-            
-
-          </Card.Body>
-        </Card>
+              size={25}
+              className="RemoveItem"
+              onClick={() => removeItem(item.id)}
+            />
+          </div>
+          <Card.Text className="CardPrice">${item.price.toFixed(2)} </Card.Text>
+          <h6> {item.description} </h6>
+          <Card.Text className="CardDesc"> </Card.Text>
+          <div className="QuantityFlex">
+            <h6>Cantidad: {quantity} </h6>
+            <h6>Total: ${item.price * quantity} </h6>
+          </div>
+        </Card.Body>
+      </Card>
     </section>
   );
 };

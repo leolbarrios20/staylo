@@ -1,13 +1,12 @@
-header{
-    position:sticky;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
 }
 
-.HeaderFlex{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.HeaderFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-

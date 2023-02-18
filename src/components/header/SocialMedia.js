@@ -1,4 +1,4 @@
-import "../header/SocialMedia.css"
+import "../header/SocialMedia.css";
 
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";

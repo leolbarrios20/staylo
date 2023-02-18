@@ -27,7 +27,6 @@ import BuyForm from "./components/form/Form";
 //Core
 import reportWebVitals from "./reportWebVitals";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -50,14 +49,12 @@ root.render(
             element={<ItemDetailContainer />}
           />
           <Route exact path="/cart" element={<CartListContainer />} />
-          
           <Route
             exact
             path="/products/:categoryId"
             element={<ItemListContainer />}
           />
-          <Route exact path="/send-order" element= {<BuyForm/>} />
-
+          <Route exact path="/send-order" element={<BuyForm />} />
         </Routes>
         <Footer />
       </HashRouter>

@@ -36,8 +36,13 @@ const ItemCount = ({ initial, stock, onAdd, product }) => {
           +
         </button>
       </div>
-      <div >
-        <Button onClick={handleShow} disabled={countProducts === 0} className="OnAdd" variant="dark">
+      <div>
+        <Button
+          onClick={handleShow}
+          disabled={countProducts === 0}
+          className="OnAdd"
+          variant="dark"
+        >
           Agregar al Carrito <AiOutlineShoppingCart size={23} />
         </Button>
       </div>
@@ -50,10 +55,21 @@ const ItemCount = ({ initial, stock, onAdd, product }) => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body className="ModalBody">
-          <p>Producto: <span>{product.title}</span> </p>
-          <p>Cantidad: <span>{countProducts}</span> </p>
-          <p>Precio p/u: <span>${parseFloat(product.price).toFixed(2)}</span>  </p>
-          <p>Precio total: <span>${parseFloat(product.price * countProducts).toFixed(2)}</span>  </p>
+            <p>
+              Producto: <span>{product.title}</span>{" "}
+            </p>
+            <p>
+              Cantidad: <span>{countProducts}</span>{" "}
+            </p>
+            <p>
+              Precio p/u: <span>${parseFloat(product.price).toFixed(2)}</span>{" "}
+            </p>
+            <p>
+              Precio total:{" "}
+              <span>
+                ${parseFloat(product.price * countProducts).toFixed(2)}
+              </span>{" "}
+            </p>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="dark" onClick={handleClose}>
@@ -66,7 +82,6 @@ const ItemCount = ({ initial, stock, onAdd, product }) => {
             </div>
           </Modal.Footer>
         </Modal>
-        
       </>
     </div>
   );
