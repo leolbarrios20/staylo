@@ -37,7 +37,7 @@ root.render(
           <Route
             exact
             path="/"
-            element={<Main brand="Staylo" specs="Remeras Personalizadas" />}
+            element={<Main brand="Staylo" specs="Remeras PerSonalizadas" />}
           />
           <Route exact path="/shipping" element={<Shipping />} />
           <Route exact path="/services" element={<Services />} />

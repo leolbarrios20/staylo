@@ -71,7 +71,7 @@ const Shipping = () => {
                 <p className="ParagraphIconFlex">Tarjetas de crédito o efectivo</p>
               </div>
             </div>
-            <div className="IconFlex">
+            <div className="IconFlex IconFlexLast">
               <BiLockAlt className="Icon" size={50} />
               <div>
                 <h6>COMPRÁ CON SEGURIDAD</h6>

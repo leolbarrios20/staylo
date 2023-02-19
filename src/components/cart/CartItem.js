@@ -4,6 +4,8 @@ import { GContext } from "../../context/CartContext";
 
 import { Card } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
+import ScrollToTop from "react-scroll-to-top";
+
 
 import "./CartItem.css";
 
@@ -11,6 +13,13 @@ const CartItem = ({ item, quantity }) => {
   const { removeItem } = useContext(GContext);
 
 
+  function CoolPage() {
+    return (
+      <div>
+        <ScrollToTop  smooth />
+      </div>
+    );
+  }
 
   /*
   const [quantityItem, setQuantityItem] = useState(quantity);
@@ -31,6 +40,7 @@ const CartItem = ({ item, quantity }) => {
 */
   return (
     <section className="row col-lg-4 col-md-6 col-sm-12 mx-auto">
+      {CoolPage()}
       <Card className="Card">
         <Card.Title className="CardTitle">{item.title}</Card.Title>
         <Card.Img className="Image" src={item.img} />

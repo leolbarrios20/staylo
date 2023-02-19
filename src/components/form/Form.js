@@ -92,7 +92,7 @@ const BuyForm = () => {
     if (itemsCarrito.length === 0) {
       setTimeout(() => {
         setLength(false);
-      }, 25000);
+      }, 8000);
     } else {
       setLength(true);
     }
@@ -409,7 +409,7 @@ const BuyForm = () => {
                     <div>
                       {/* Metodo de Pago */}
                       <div>
-                        <div>
+                        <div className="paymenthflex">
                           <p >
                             <span>(*)</span> Metodo de Pago:
                           </p>

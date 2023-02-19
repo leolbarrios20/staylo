@@ -73,6 +73,7 @@
 
 .PaymenthParagraph {
   text-align: center;
+  width: 100%;
 }
 
 .PaymenthParagraphInner{
@@ -100,4 +101,10 @@
   .PhoneEmailLabel {
     flex-direction: column;
   }
+}
+
+.paymenthflex{
+  display: flex;
+  justify-content: center;
+  gap: 2%;
 }

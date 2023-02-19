@@ -32,5 +32,14 @@
 .FilterFlex {
   display: flex;
   align-content: center;
-  gap: 30px;
+  gap: 10px;
+  font-family: "agency_fb", sans-serif;
+
+}
+
+
+.FilterFlex h6{
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-top: 3px;
 }

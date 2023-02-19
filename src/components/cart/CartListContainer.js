@@ -11,6 +11,7 @@ import { FaTruck } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 
+
 import Cabal from "../assets/img/cabal.png";
 import MasterCard from "../assets/img/mastercard.png";
 import TarjetShopping from "../assets/img/tarjeta-shopping.png";
@@ -23,6 +24,7 @@ import RapiPago from "../assets/img/rapipago.png";
 import "./CartListContainer.css";
 
 const CartListContainer = () => {
+
   const { itemsCarrito, getTotal, clear, totalProducts } = useContext(GContext);
 
   const [delivery, setDelivery] = useState(false);
@@ -49,6 +51,8 @@ const CartListContainer = () => {
       setDelivery(false);
     }
   }, [getTotal]);
+
+
 
   return (
     <section className="CartListContainer">

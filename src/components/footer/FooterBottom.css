@@ -7,4 +7,8 @@
 .FooterBottom {
   background-color: black;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1%;
 }

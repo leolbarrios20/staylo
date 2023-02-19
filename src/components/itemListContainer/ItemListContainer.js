@@ -13,7 +13,6 @@ import { Spinner } from "react-bootstrap";
 import { IoShirtOutline } from "react-icons/io5";
 import { IoShirtSharp } from "react-icons/io5";
 import { BsArrowRight } from "react-icons/bs";
-
 import { GiHoodie } from "react-icons/gi";
 
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
@@ -51,8 +50,6 @@ const ItemListContainer = () => {
 
   const [loading, setLoading] = useState(false);
 
-  
-
   function CoolPage() {
     return (
       <div>
@@ -80,7 +77,7 @@ const ItemListContainer = () => {
           <nav className="NavFilter container mx-auto">
             <div className="FilterFlex">
               <h6>FILTRAR </h6>
-              <BsArrowRight size={25} />
+              <BsArrowRight className="" size={25} />
             </div>
 
             <OverlayTrigger overlay={<Tooltip>Remeras Sublimadas</Tooltip>}>

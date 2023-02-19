@@ -64,8 +64,6 @@
   .Background h2 {
     font-size: 5vw;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.123);
-    backdrop-filter: blur(5px);
     margin-top: 8px;
   }
 }

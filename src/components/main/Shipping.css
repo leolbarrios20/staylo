@@ -87,8 +87,11 @@
   .IconFlexCenter {
     border-bottom: white 1px solid;
     border-right: none;
+    padding-bottom: 50px;
+    margin-bottom: -20px;
   }
 }
+
 
 .IconFlexContainer {
   display: flex;
