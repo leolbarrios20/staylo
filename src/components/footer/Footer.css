@@ -1,4 +1,3 @@
-@import url("http://allfont.net/allfont.css?fonts=agency-fb-bold");
 
 .Footer {
   background-color: #212429;
@@ -46,7 +45,7 @@
   margin: 0;
   font-size: 20px;
   letter-spacing: 1px;
-  font-family: 'Agency FB Bold', arial;
+  font-weight: 700;
 }
 
 .PaymentsMethods {

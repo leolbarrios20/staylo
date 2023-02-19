@@ -449,16 +449,16 @@ const BuyForm = () => {
                       </Button>
 
                       {formSend && (
-                        <div className="exito">
-                          <div className="resumen_de_compra">
+                        <div>
+                          <div>
                             <h4>¡Compra Exitosa!</h4>
-                            <p className="number_order">
+                            <p>
                               {" "}
                               <span>Su código de orden es:</span> {orderId}
                             </p>
-                            <hr className="linea_separativa" />
+                            <hr/>
                             {/* datos del usuario */}
-                            <div className="datos_buyer">
+                            <div>
                               <p>
                                 Nombre: <span>{orderData.buyer.name}</span>
                               </p>

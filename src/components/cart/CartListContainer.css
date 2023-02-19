@@ -1,9 +1,7 @@
-@import url("http://allfont.net/allfont.css?fonts=agency-fb-bold");
 
 
 .EmptyCart {
   text-align: center;
-  font-family: 'Agency FB Bold', arial;
 
 }
 
@@ -13,8 +11,7 @@
   flex-direction: column;
   gap: 70px;
   margin-top: 80px;
-  height: 50vmin;
-
+  font-family: "agency_fb", sans-serif;
 }
 
 
@@ -149,8 +146,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-family: 'Agency FB Bold', arial;
-  text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 1.5px;
 
 }
