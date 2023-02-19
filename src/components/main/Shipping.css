@@ -1,78 +1,123 @@
-@import url("http://allfont.net/allfont.css?fonts=agency-fb-bold");
-
-
 .ShipmentFlexImg {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
-.ShipmentFlexImg li{
+.ShipmentFlexImg li {
   font-family: "agency_fb", sans-serif;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   list-style: none;
 }
 
-.ShipmentFlexImg li span{
-  font-family: 'Agency FB Bold', arial;  
+.ShipmentFlexImg li span {
+  font-family: "agency_fb", sans-serif;
+  font-weight: 700;
 }
 .ShipmentFlexImg img {
   max-width: 80px;
 }
 
-.ShippingContainer{
+.ShipmentFlexImgContainer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ShippingContainer {
   padding: 20px;
   text-align: center;
   margin-top: 50px;
 }
 
-.ShippingContainer h3{
-  font-family: 'Agency FB Bold', arial;
-}
-
-.ShippingContainer .Paragraph{
+.ShippingContainer h3 {
   font-family: "agency_fb", sans-serif;
-  letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 4vw;
 }
 
+@media (max-width: 990px) {
+  .ShippingContainer h3 {
+    font-size: 8vw;
+  }
+}
 
-.IconFlex{
+.ShippingContainer .Paragraph {
+  font-weight: 600;
+  text-align: center;
+}
+
+.IconFlex {
   display: flex;
   align-items: flex-start;
-  align-content: center;
-  gap: 5%;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 30px;
   padding: 0 10px;
-  max-width: 300px;
+  max-width: 800px;
   font-family: "agency_fb", sans-serif;
   letter-spacing: 1.5px;
+  padding: 3%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
-.IconFlexContainer{
+.IconFlex h6,
+.ParagraphIconFlex {
+  text-align: left;
+}
+
+.IconFlexFirst {
+  border-right: white 1px solid;
+}
+
+@media (max-width: 990px) {
+  .IconFlexFirst {
+    border-bottom: white 1px solid;
+    border-right: none;
+  }
+}
+
+.IconFlexCenter {
+  border-right: white 1px solid;
+}
+
+@media (max-width: 990px) {
+  .IconFlexCenter {
+    border-bottom: white 1px solid;
+    border-right: none;
+  }
+}
+
+.IconFlexContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center; 
-  gap: 2%;
-  color: rgb(94, 94, 94);
+  align-content: center;
+  color: rgb(240, 240, 240);
   margin-top: 100px;
+  background-color: #212429;
+  border-radius: 15px;
 }
 
 @media (max-width: 990px) {
   .IconFlexContainer {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    align-items: center;
     gap: 50px;
+    padding-top: 20px;
   }
 }
 
-.IconFlexContainer h6{
+.IconFlexContainer h6 {
   font-size: 15px;
-  font-family: 'Agency FB Bold', arial;
-
+  font-family: "agency_fb", sans-serif;
+  font-weight: 700;
 }
 
-.Icon{
-  color: rgb(94, 94, 94);
+.Icon {
+  color: rgb(240, 240, 240);
+  transform: translate(0px, -2px);
 }
-

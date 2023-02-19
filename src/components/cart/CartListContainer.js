@@ -31,6 +31,10 @@ const CartListContainer = () => {
 
   const deliveryPrice = 1300;
 
+  function ScrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -54,6 +58,7 @@ const CartListContainer = () => {
         </div>
       ) : (
         <div>
+          {ScrollToTop()}
           <div>
             {itemsCarrito.length > 0 ? (
               <div className="Cart">

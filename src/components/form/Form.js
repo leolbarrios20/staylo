@@ -100,6 +100,10 @@ const BuyForm = () => {
 
   const [modalShow, setModalShow] = React.useState(false);
 
+  function ScrollToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }
+
   return (
     <Formik
       initialValues={{
@@ -214,6 +218,7 @@ const BuyForm = () => {
             <div>
               {!formSend ? (
                 <div>
+                  {ScrollToTop()}
                   <div>
                     {/* TITULO */}
                     <h4 className="FinalBuy">Finalizar Compra:</h4>
@@ -244,127 +249,136 @@ const BuyForm = () => {
                       </div>
 
                       {/* Telefono */}
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Telefono
-                        </label>
-                        <Field
-                          type="number"
-                          id="phone"
-                          name="phone"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="351 152525252"
-                        />
-                        <ErrorMessage
-                          name="phone"
-                          component={() => (
-                            <div className="Error">{errors.phone}</div>
-                          )}
-                        />
+
+                      <div className="PhoneEmailLabel">
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Telefono
+                          </label>
+                          <Field
+                            type="number"
+                            id="phone"
+                            name="phone"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="351 152525252"
+                          />
+                          <ErrorMessage
+                            name="phone"
+                            component={() => (
+                              <div className="Error">{errors.phone}</div>
+                            )}
+                          />
+                        </div>
+
+                        {/* Email */}
+
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Email
+                          </label>
+                          <Field
+                            type="email"
+                            id="email"
+                            name="email"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="staylo@gmail.com"
+                          />
+                          <ErrorMessage
+                            name="email"
+                            component={() => (
+                              <div className="Error">{errors.email}</div>
+                            )}
+                          />
+                        </div>
                       </div>
 
-                      {/* Email */}
+                      {/*Provincia */}
+                      <div className="PhoneEmailLabel">
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Provincia
+                          </label>
+                          <Field
+                            type="text"
+                            id="province"
+                            name="province"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="Córdoba"
+                          />
+                          <ErrorMessage
+                            name="province"
+                            component={() => (
+                              <div className="Error">{errors.province}</div>
+                            )}
+                          />
+                        </div>
+                        {/* Localidad */}
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Localidad
+                          </label>
+                          <Field
+                            type="text"
+                            id="location"
+                            name="location"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="Córdoba"
+                          />
+                          <ErrorMessage
+                            name="location"
+                            component={() => (
+                              <div className="Error">{errors.location}</div>
+                            )}
+                          />
+                        </div>
+                      </div>
 
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Email
-                        </label>
-                        <Field
-                          type="email"
-                          id="email"
-                          name="email"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="staylo@gmail.com"
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component={() => (
-                            <div className="Error">{errors.email}</div>
-                          )}
-                        />
-                      </div>
-                      {/* Estado/Provincia */}
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Provincia
-                        </label>
-                        <Field
-                          type="text"
-                          id="province"
-                          name="province"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="Córdoba"
-                        />
-                        <ErrorMessage
-                          name="province"
-                          component={() => (
-                            <div className="Error">{errors.province}</div>
-                          )}
-                        />
-                      </div>
-                      {/* Localidad */}
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Localidad
-                        </label>
-                        <Field
-                          type="text"
-                          id="location"
-                          name="location"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="Córdoba"
-                        />
-                        <ErrorMessage
-                          name="location"
-                          component={() => (
-                            <div className="Error">{errors.location}</div>
-                          )}
-                        />
-                      </div>
                       {/* Calle */}
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Calle
-                        </label>
-                        <Field
-                          type="text"
-                          id="street"
-                          name="street"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="Calle"
-                        />
-                        <ErrorMessage
-                          name="street"
-                          component={() => (
-                            <div className="Error">{errors.street}</div>
-                          )}
-                        />
-                      </div>
-                      {/* Numero de Calle */}
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Número
-                        </label>
-                        <Field
-                          type="number"
-                          id="number"
-                          name="number"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="1234"
-                        />
-                        <ErrorMessage
-                          name="number"
-                          component={() => (
-                            <div className="Error">{errors.number}</div>
-                          )}
-                        />
-                      </div>
+                      <div className="PhoneEmailLabel">
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Calle
+                          </label>
+                          <Field
+                            type="text"
+                            id="street"
+                            name="street"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="Calle"
+                          />
+                          <ErrorMessage
+                            name="street"
+                            component={() => (
+                              <div className="Error">{errors.street}</div>
+                            )}
+                          />
+                        </div>
+                        {/* Numero de Calle */}
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Número
+                          </label>
+                          <Field
+                            type="number"
+                            id="number"
+                            name="number"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="1234"
+                          />
+                          <ErrorMessage
+                            name="number"
+                            component={() => (
+                              <div className="Error">{errors.number}</div>
+                            )}
+                          />
+                        </div>
+                      
                       {/* Codigo Postal */}
                       <div className="FormFlex">
                         <label className="DataReq">
@@ -386,6 +400,7 @@ const BuyForm = () => {
                         />
                       </div>
                     </div>
+                    </div>
                   </div>
                   <hr />
                   {/* Pago */}
@@ -395,10 +410,10 @@ const BuyForm = () => {
                       {/* Metodo de Pago */}
                       <div>
                         <div>
-                          <p className="PaymenthParagraph">
+                          <p >
                             <span>(*)</span> Metodo de Pago:
                           </p>
-                          <p> {paymenthMethod} </p>
+                          <p className="PaymenthParagraphInner"> {paymenthMethod} </p>
                         </div>
 
                         <div>
@@ -456,7 +471,7 @@ const BuyForm = () => {
                               {" "}
                               <span>Su código de orden es:</span> {orderId}
                             </p>
-                            <hr/>
+                            <hr />
                             {/* datos del usuario */}
                             <div>
                               <p>
@@ -507,75 +522,74 @@ const BuyForm = () => {
                 </div>
               ) : (
                 <div>
-                    <>
-                      <MyVerticallyCenteredModal
-                        show={modalShow}
-                        onHide={() => setModalShow(false)}
-                      />
-                    </>
-                    <section className="EmptyCartContainer">
-            <div className="EmptyCart">
-              <p className=" OffCanvasP EmptyCartP">
-                El carrito de compras se encuentra vacio
-              </p>
-              <Link className="AddMoreProducts" to="/products">
-                <Button variant="dark">Agregar Productos</Button>
-              </Link>
-            </div>
-            <div className="FlexIconsCartContainer">
-              <p>Visita nuestras redes</p>
-              <div className="FlexIconsCart">
-                <a
-                  href="https://www.instagram.com/staylo_cba/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsInstagram color="black" size={25} />
-                </a>
-                <a
-                  href="https://www.facebook.com/search/top?q=staylo_cba"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsFacebook color="black" size={25} />
-                </a>
-              </div>
-            </div>
-          </section>
-                    
+                  <>
+                    <MyVerticallyCenteredModal
+                      show={modalShow}
+                      onHide={() => setModalShow(false)}
+                    />
+                  </>
+                  <section className="EmptyCartContainer">
+                    <div className="EmptyCart">
+                      <p className=" OffCanvasP EmptyCartP">
+                        El carrito de compras se encuentra vacio
+                      </p>
+                      <Link className="AddMoreProducts" to="/products">
+                        <Button variant="dark">Agregar Productos</Button>
+                      </Link>
+                    </div>
+                    <div className="FlexIconsCartContainer">
+                      <p>Visita nuestras redes</p>
+                      <div className="FlexIconsCart">
+                        <a
+                          href="https://www.instagram.com/staylo_cba/"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <BsInstagram color="black" size={25} />
+                        </a>
+                        <a
+                          href="https://www.facebook.com/search/top?q=staylo_cba"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <BsFacebook color="black" size={25} />
+                        </a>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               )}
             </div>
           ) : (
             <section className="EmptyCartContainer">
-            <div className="EmptyCart">
-              <p className=" OffCanvasP EmptyCartP">
-                El carrito de compras se encuentra vacio
-              </p>
-              <Link className="AddMoreProducts" to="/products">
-                <Button variant="dark">Agregar Productos</Button>
-              </Link>
-            </div>
-            <div className="FlexIconsCartContainer">
-              <p>Visita nuestras redes</p>
-              <div className="FlexIconsCart">
-                <a
-                  href="https://www.instagram.com/staylo_cba/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsInstagram color="black" size={25} />
-                </a>
-                <a
-                  href="https://www.facebook.com/search/top?q=staylo_cba"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsFacebook color="black" size={25} />
-                </a>
+              <div className="EmptyCart">
+                <p className=" OffCanvasP EmptyCartP">
+                  El carrito de compras se encuentra vacio
+                </p>
+                <Link className="AddMoreProducts" to="/products">
+                  <Button variant="dark">Agregar Productos</Button>
+                </Link>
               </div>
-            </div>
-          </section>
+              <div className="FlexIconsCartContainer">
+                <p>Visita nuestras redes</p>
+                <div className="FlexIconsCart">
+                  <a
+                    href="https://www.instagram.com/staylo_cba/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsInstagram color="black" size={25} />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/search/top?q=staylo_cba"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsFacebook color="black" size={25} />
+                  </a>
+                </div>
+              </div>
+            </section>
           )}
         </Form>
       )}

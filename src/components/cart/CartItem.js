@@ -10,9 +10,7 @@ import "./CartItem.css";
 const CartItem = ({ item, quantity }) => {
   const { removeItem } = useContext(GContext);
 
-  function ScrollToTop() {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }
+
 
   /*
   const [quantityItem, setQuantityItem] = useState(quantity);
@@ -33,7 +31,6 @@ const CartItem = ({ item, quantity }) => {
 */
   return (
     <section className="row col-lg-4 col-md-6 col-sm-12 mx-auto">
-      {ScrollToTop()}
       <Card className="Card">
         <Card.Title className="CardTitle">{item.title}</Card.Title>
         <Card.Img className="Image" src={item.img} />

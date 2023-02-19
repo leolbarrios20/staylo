@@ -25,7 +25,7 @@
 
 .BuyerDataParagraph {
   font-weight: 600;
-  text-align: left;
+  text-align: center;
   margin: 30px 5px;
 }
 
@@ -75,6 +75,11 @@
   text-align: center;
 }
 
+.PaymenthParagraphInner{
+  text-align: center;
+  font-weight: 700;
+}
+
 .ModalParagraph{
   font-weight: 600;
 }
@@ -82,4 +87,17 @@
 .ModalParagraph span{
   font-weight: 700;
   font-style: italic;
+}
+
+.PhoneEmailLabel{
+  display: flex;
+  justify-content: flex-start;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 450px) {
+  .PhoneEmailLabel {
+    flex-direction: column;
+  }
 }
