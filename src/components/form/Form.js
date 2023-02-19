@@ -1,15 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
-import Select from "react-select";
 import { GContext } from "../../context/CartContext";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../services/firebase";
+
+import Select from "react-select";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Link } from "react-router-dom";
 import CartItem from "../cart/CartItem";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
-import { BsInstagram } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
+import { BsInstagram, BsFacebook } from "react-icons/bs";
 
 // Estilos
 import "./Form.css";
@@ -50,7 +50,7 @@ const BuyForm = () => {
           <Link to="/products" className="seguir_comprando">
             Seguir Comprando
           </Link>
-          <Button onClick={props.onHide}>Close</Button>
+          <Button onClick={props.onHide}>Cerrar</Button>
         </Modal.Footer>
       </Modal>
     );
@@ -378,28 +378,28 @@ const BuyForm = () => {
                             )}
                           />
                         </div>
-                      
-                      {/* Codigo Postal */}
-                      <div className="FormFlex">
-                        <label className="DataReq">
-                          <span>(*)</span> Codigo Postal
-                        </label>
-                        <Field
-                          type="number"
-                          id="postal"
-                          name="postal"
-                          autoComplete="on"
-                          className="Label"
-                          placeholder="5000"
-                        />
-                        <ErrorMessage
-                          name="postal"
-                          component={() => (
-                            <div className="Error">{errors.postal}</div>
-                          )}
-                        />
+
+                        {/* Codigo Postal */}
+                        <div className="FormFlex">
+                          <label className="DataReq">
+                            <span>(*)</span> Codigo Postal
+                          </label>
+                          <Field
+                            type="number"
+                            id="postal"
+                            name="postal"
+                            autoComplete="on"
+                            className="Label"
+                            placeholder="5000"
+                          />
+                          <ErrorMessage
+                            name="postal"
+                            component={() => (
+                              <div className="Error">{errors.postal}</div>
+                            )}
+                          />
+                        </div>
                       </div>
-                    </div>
                     </div>
                   </div>
                   <hr />
@@ -410,10 +410,13 @@ const BuyForm = () => {
                       {/* Metodo de Pago */}
                       <div>
                         <div className="paymenthflex">
-                          <p >
+                          <p>
                             <span>(*)</span> Metodo de Pago:
                           </p>
-                          <p className="PaymenthParagraphInner"> {paymenthMethod} </p>
+                          <p className="PaymenthParagraphInner">
+                            {" "}
+                            {paymenthMethod}{" "}
+                          </p>
                         </div>
 
                         <div>
