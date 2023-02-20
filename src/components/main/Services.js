@@ -24,7 +24,9 @@ const Services = () => {
         </div>
       ) : (
         <div className="ServicesContainer container">
+          <h1 className="p-4">Servicios</h1>
           <img className="col-12" alt="" src={ImgServices}></img>
+          
         </div>
       )}
     </section>

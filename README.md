@@ -63,9 +63,15 @@ En esta base de datos encontramos dos colecciones:
 
 ![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%201.jpg)
 
-![]()
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%202.jpg?raw=true)
 
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%203.jpg?raw=true)
 
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%204.jpg?raw=true)
+
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%205.jpg?raw=true)
+
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%206.jpg?raw=true)
 
 # Autores
 - Leonardo López Barrios

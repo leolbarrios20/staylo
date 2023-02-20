@@ -12,3 +12,11 @@
   align-content: center;
   gap: 1%;
 }
+
+@media (max-width: 990px) {
+  .FooterBottom {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+}

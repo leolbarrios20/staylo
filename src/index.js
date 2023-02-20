@@ -20,7 +20,7 @@ import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailCont
 import CartListContainer from "./components/cart/CartListContainer";
 import Shipping from "./components/main/Shipping";
 import Services from "./components/main/Services";
-import AboutUs from "./components/main/AboutUs";
+import Contact from "./components/main/Contact";
 import Footer from "./components/footer/Footer";
 import BuyForm from "./components/form/Form";
 
@@ -41,7 +41,7 @@ root.render(
           />
           <Route exact path="/shipping" element={<Shipping />} />
           <Route exact path="/services" element={<Services />} />
-          <Route exact path="/about-us" element={<AboutUs />} />
+          <Route exact path="/about-us" element={<Contact />} />
           <Route exact path="/products" element={<ItemListContainer />} />
           <Route
             exact
