@@ -1,6 +1,6 @@
 # Staylo - Ecommerce de Remeras Personalizadas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/StayloLogo.jpg)
 
 ## Sobre Este Proyecto
 
@@ -53,11 +53,18 @@ En esta base de datos encontramos dos colecciones:
 [https://github.com/leolbarrios20/Staylo.git](https://github.com/leolbarrios20/Staylo.git)
 
 2. Descarga del ZIP
-[https://github.com/leolbarrios20/Staylo/archive/refs/heads/main.zip]https://github.com/leolbarrios20/Staylo/archive/refs/heads/main.zip)
+[https://github.com/leolbarrios20/Staylo/archive/refs/heads/main.zip]
 
 3. Descomprimir carpeta.
 
 4. Abrir carpeta en un editor de código fuente.
+
+# Visuales
+
+![](https://github.com/leolbarrios20/Staylo/blob/main/src/components/assets/img/Captura%201.jpg)
+
+![]()
+
 
 
 # Autores

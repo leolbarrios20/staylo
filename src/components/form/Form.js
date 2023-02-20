@@ -14,10 +14,6 @@ import { BsInstagram, BsFacebook } from "react-icons/bs";
 // Estilos
 import "./Form.css";
 
-// componentes
-
-//        LOGICA
-
 // Función constructora
 const BuyForm = () => {
   function MyVerticallyCenteredModal(props) {
