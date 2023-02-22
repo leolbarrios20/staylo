@@ -4,6 +4,7 @@ import { GContext } from "../../context/CartContext";
 import CartItem from "./CartItem";
 
 import { Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 import { Button } from "react-bootstrap";
 import { Spinner } from "react-bootstrap";
 import { BsArrowRight } from "react-icons/bs";
@@ -25,6 +26,14 @@ import "./CartListContainer.css";
 
 const CartListContainer = () => {
 
+  function CoolPage() {
+    return (
+      <div>
+        <ScrollToTop  smooth />
+      </div>
+    );
+  }
+
   const { itemsCarrito, getTotal, clear, totalProducts } = useContext(GContext);
 
   const [delivery, setDelivery] = useState(false);
@@ -33,7 +42,7 @@ const CartListContainer = () => {
 
   const deliveryPrice = 1300;
 
-  function ScrollToTop() {
+  function ScrollTotop() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
 
@@ -62,7 +71,8 @@ const CartListContainer = () => {
         </div>
       ) : (
         <div>
-          {ScrollToTop()}
+          {CoolPage()}
+          {ScrollTotop()}
           <div>
             {itemsCarrito.length > 0 ? (
               <div className="Cart">

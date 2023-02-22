@@ -41,7 +41,7 @@ root.render(
           />
           <Route exact path="/shipping" element={<Shipping />} />
           <Route exact path="/services" element={<Services />} />
-          <Route exact path="/about-us" element={<Contact />} />
+          <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/products" element={<ItemListContainer />} />
           <Route
             exact

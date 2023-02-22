@@ -16,6 +16,8 @@ import "./Form.css";
 
 // Función constructora
 const BuyForm = () => {
+
+
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal
@@ -96,7 +98,7 @@ const BuyForm = () => {
 
   const [modalShow, setModalShow] = React.useState(false);
 
-  function ScrollToTop() {
+  function ScrollTotop( ) {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }
 
@@ -209,12 +211,12 @@ const BuyForm = () => {
       }}
     >
       {({ errors }) => (
-        <Form className="container-fluid">
+        <Form className="container-fluid" id="form">
           {length ? (
             <div>
               {!formSend ? (
                 <div>
-                  {ScrollToTop()}
+                  {ScrollTotop()}
                   <div>
                     {/* TITULO */}
                     <h4 className="FinalBuy">Finalizar Compra:</h4>

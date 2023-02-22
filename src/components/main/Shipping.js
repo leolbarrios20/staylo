@@ -5,10 +5,7 @@ import { Spinner } from "react-bootstrap";
 import { FaRegCreditCard } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 
-
 import { BiLockAlt } from "react-icons/bi";
-
-
 
 import Andreani from "../assets/img/andreani.png";
 import CorreoArgentino from "../assets/img/correo-argentino.png";
@@ -35,12 +32,19 @@ const Shipping = () => {
         <div className="ShippingContainer col-12">
           <div className=" mx-auto">
             <h3>Formas de envío</h3>
+            <div className="ShippingParagraphContainer">
+
             <p className="Paragraph">
               El costo de envío se abona aparte y es a cargo del comprador
             </p>
             <p className="Paragraph">
               Cuando los pedidos superen los $15000, el envío es gratis
             </p>
+
+
+
+            </div>
+
             <div className="ShipmentFlexImgContainer">
               <ul className="ShipmentFlexImg">
                 <li>

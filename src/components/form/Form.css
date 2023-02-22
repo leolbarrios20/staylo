@@ -26,7 +26,7 @@
 .BuyerDataParagraph {
   font-weight: 600;
   text-align: center;
-  margin: 30px 5px;
+  margin-top: 35px;
 }
 
 .DataReq {
@@ -37,6 +37,7 @@
 .FormFlex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 5px;
 }
 
@@ -107,4 +108,51 @@
   display: flex;
   justify-content: center;
   gap: 2%;
+}
+
+.Form {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 50px 0;
+  max-width: 700px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#form input[type="text"],
+#form input[type="number"],
+#form input[type="email"],
+#form textarea,
+#form button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+
+
+#form input[type="text"],
+#form input[type="email"],
+#form input[type="number"],
+#form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+
+#form input[type="text"]:hover,
+#form input[type="email"]:hover,
+#form input[type="number"]:hover,
+#form textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+
+#form input:focus,
+#form textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
 }

@@ -79,7 +79,6 @@ const ItemListContainer = () => {
               <h6>FILTRAR </h6>
               <BsArrowRight className="" size={25} />
             </div>
-
             <OverlayTrigger overlay={<Tooltip>Remeras Sublimadas</Tooltip>}>
               <span className="d-inline-block">
                 <Link to="/products/Sublimated">

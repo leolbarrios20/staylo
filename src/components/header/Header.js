@@ -49,8 +49,8 @@ function Header() {
               <Nav.Link className="hvr-underline-from-left" href="/#/services">
                 Servicios
               </Nav.Link>
-              <Nav.Link className="hvr-underline-from-left" href="/#/about-us">
-                Nosotros
+              <Nav.Link className="hvr-underline-from-left" href="/#/contact">
+                Contacto
               </Nav.Link>
               <Nav.Link href="/#/cart">
                 <div className="CartSocialFlex ">

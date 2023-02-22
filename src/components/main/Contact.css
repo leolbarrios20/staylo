@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +86,7 @@ fieldset {
   resize: none;
 }
 
-#contact button[type="submit"] {
+#contact button {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -98,19 +97,15 @@ fieldset {
   font-size: 15px;
 }
 
-#contact button[type="submit"]:hover {
+#contact button:hover {
   background: rgb(61, 61, 61);
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
-#contact button[type="submit"]:active {
+#contact button:active {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.copyright {
-  text-align: center;
 }
 
 #contact input:focus,

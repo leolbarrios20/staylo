@@ -10,7 +10,7 @@ En el transcurso del aprendizaje y conocimiento acerca de las tecnologias usadas
 
 Este consiste en:
 
-**Tareas Principales: **
+##### Tareas Principales:
 1. Ver la lista de los productos, en su totalidad o filtrado por remera o buzo, tambien si el producto es sublimado o estampado.
 2. Ver detalles de un producto individual.
 3. Elegir el talle.
@@ -21,7 +21,7 @@ Este consiste en:
 8. Llenar el formulario para confimar la compra.
 9. Obtener el id de la compra.
 
-**Tareas Secundarias: **
+##### Tareas Secundarias: 
 - Conocer los servicios que presta la tienda.
 - Conocer la historia de "Staylo".
 - Conocer las redes sociales reales de la tienda.
@@ -32,9 +32,15 @@ En este proyecto se utilizó el editor de código fuente "Visual Studio Code", d
 
 Hacemos uso de HTML, CSS y JavaScript.
 
+Utilizamos la librería de CSS React Bootstrap, para dar estilo a gran parte del sitio. 
+
+Utilizamos los iconos de React Icons.
+
+También se utilizó una libreria llamada react-scroll-to-top, y es para cuando el usuario baja en la página, pueda apretar un botón e ir al inicio de la misma. 
+
 Se utilizan Medias Queries, disfrutando la tienda en todos los tamaños de dispositivos.
 
-Para simular una base de datos funcional, utilizamos "Firebase", teniendo todos los productos alojados en la nube para trabajar con los mismos, obteniendo "id" y ver las compras que se realizaron en la tienda.
+Para simular una base de datos funcional, utilizamos "Firebase", teniendo todos los productos alojados en una base de datos para trabajar con los mismos, obteniendo "id" y ver las compras que se realizaron en la tienda.
 
 En esta base de datos encontramos dos colecciones:
 
