@@ -41,6 +41,7 @@
   font-family: "Colonna MT", sans-serif;
   text-shadow: 1px 3px 4px black;
   transform: translate(0, 20%);
+  margin-bottom: 15px;
 }
 
 @media (max-width: 800px ) {
